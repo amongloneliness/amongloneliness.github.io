@@ -1,0 +1,240 @@
+/*Fonts*/
+@font-face{
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face{
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto/Roboto-Light.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face{
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face{
+  font-family: "Caveat-Regular";
+  src: url("../fonts/Caveat/Caveat-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face{
+  font-family: "YanoneKaffeesatz-VariableFont_wght";
+  src: url("../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+a{
+  color: #e2e2e2;
+  text-decoration: none;
+  font-weight: normal;
+  font-family: "Roboto-Regular";
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #0000006e;
+  color: #ffffff;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  padding: 0px 15px;
+}
+
+.nav_item{
+  padding: 12px 15px;
+  font-size: 90%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.nav_item:hover{
+  border-radius: 3px;
+  background-color: #242424;
+}
+
+.nav_special_button{
+  background-color: #570505;
+  border-radius: 3px;
+  font-family: "Roboto-Medium";
+}
+
+.nav_logo{
+  font-family: "Caveat-Regular";
+  font-size: 100%;
+  padding: 11px 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0f0f0f;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.h1_name{
+  display: flex;
+  color: #e2e2e2;
+  font-weight: lighter;
+  flex-direction: row;
+  align-items: center;
+}
+
+.h1_name_ru{
+  font-family: "YanoneKaffeesatz-VariableFont_wght";
+  margin: 0px 10px;
+}
+
+.h1_name_eng{
+  font-family: "Caveat-Regular";
+  margin-left: 2px;
+}
+
+.block{
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
+.rec_1{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rec_2{
+  display: flex;
+  background-color: #e2e2e2;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rec_3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rec_4{
+  display: flex;
+  flex-direction: column;
+  background-color: #e2e2e2;
+}
+
+.rec_5{
+  display: flex;
+  background-color: #e2e2e2;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons_conteiner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.sites{
+  margin-right: 100px;
+}
+
+h1{
+  display: flex;
+  font-family: "Roboto-Light";
+  justify-content: center;
+}
+
+h2{
+  display: flex;
+  font-family: "Roboto-Light";
+  justify-content: center;
+}
+
+article{
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  color: #242424;
+  font-family: "Roboto-Regular";
+  padding-left: 30%;
+  padding-right: 30%;
+  line-height: 1.8;
+}
+
+.special_h1{
+  font-family: "YanoneKaffeesatz-VariableFont_wght";
+  color: #e2e2e2;
+}
+
+.special_h1_black{
+  font-family: "YanoneKaffeesatz-VariableFont_wght";
+  color: #000000;
+}
+
+.habits{
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto-Light";
+  color: #e2e2e2;
+  font-size: 19px;
+  padding-left: 3%;
+}
+
+.conteiner_works{
+  display: flex;
+  padding: 0px 10px;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logos{
+  margin: 1%;
+}
+
+.gray_text{
+  color: #242424;
+}
+
+.imgbackground1{
+  background-image: url(../img/background1.jpg);
+  background-attachment: fixed;
+}
+
+.imgbackground2{
+  background-image: url(../img/background2.jpg);
+  background-attachment: fixed;
+}
+
+.imgbackground3{
+  background-image: url(../img/background3.jpg);
+  background-attachment: fixed;
+}
+
+.linkintext{
+  color: #910404;
+}
