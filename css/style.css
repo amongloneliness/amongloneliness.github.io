@@ -5,7 +5,6 @@ body{
   justify-content: center;
   background-color: #0f0f0f;
   margin: 1vmax 0%;
-  font-display: swap;
 }
 
 /*Header и панель навигации*/
@@ -181,30 +180,35 @@ nav{
   src: url("../fonts/Roboto/Roboto-Regular.ttf");
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 @font-face{
   font-family: "Roboto-Light";
   src: url("../fonts/Roboto/Roboto-Light.ttf");
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 @font-face{
   font-family: "Roboto-Medium";
   src: url("../fonts/Roboto/Roboto-Medium.ttf");
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 @font-face{
   font-family: "Caveat-Regular";
   src: url("../fonts/Caveat/Caveat-Regular.ttf");
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 @font-face{
   font-family: "YanoneKaffeesatz-VariableFont_wght";
   src: url("../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf");
   font-style: normal;
   font-weight: normal;
+  font-display: swap;
 }
 
 /*Media запросы*/
