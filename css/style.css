@@ -239,23 +239,50 @@ nav{
 /*Tablet*/
 @media (max-width: 768px){
   .nav_item{
-    font-size: 1.6vmax;
-    padding: 1.4vmax;
+    font-size: 2vw;
+    padding: 1.4vw;
   }
   .nav_logo{
-    font-size: 2.2vmax;
+    font-size: 3vw;
   }
   .business_card{
     flex-direction: column;
     justify-content: center;
+    font-size: 3vw;
   }
   .sites{
     order:1;
     margin-right: 0%;
   }
+  .business_card_avatar{
+    width: 40%;
+    height: 40%;
+  }
+  .icon{
+    margin: 2vw 0.7vw 2vw;
+    width: 6vw;
+    transition: all 0.07s ease;
+  }
+  .icon:hover{
+    margin: 0vmax 0.7vw 0vmax;
+    width: 10vw;
+  }
 }
 /*Mobile L*/
 @media (max-width: 425px){
+  .nav_item{
+    display: none;
+  }
+  .nav_logo{
+    font-size: 7vw;
+  }
+  .business_card_avatar{
+    width: 80%;
+    height: 80%;
+  }
+  .business_card{
+    font-size: 4vw;
+  }
 }
 /*Mobile M*/
 @media (max-width: 375px){
