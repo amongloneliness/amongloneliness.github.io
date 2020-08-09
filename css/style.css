@@ -66,8 +66,9 @@ nav{
   display: none;
   padding-top: 12vw;
   background-color: #000000b7;
-  position: absolute;
+  position: fixed;
   z-index: 1;
+  top: 0;
   left: 0;
   right: 0;
 }
@@ -173,6 +174,10 @@ nav{
 
 .business_card_avatar img{
   width: 100%;
+}
+
+.mobile_avatar_photo{
+  display: none;
 }
 
 .layer{
@@ -304,9 +309,6 @@ nav{
 }
 /*Mobile L*/
 @media (max-width: 480px){
-  .nav_item{
-    display: none;
-  }
   .nav_logo{
     font-size: 4vw;
     margin: 0vh 3vw;
@@ -319,19 +321,17 @@ nav{
     font-size: 3vw;
     color: #d4d4d4;
   }
-  .mobile_menu_icon{
-    display: flex;
+  .mobile_menu_icon, .mobile_menu_icon.active{
     width: 5vw;
     height: 5vw;
+  }
+  .mobile_menu_icon{
     margin-right: 3vw;
   }
   .mobile_menu_icon.active{
-    width: 5vw;
-    height: 5vw;
     opacity: 0.4;
   }
   .block.mobile_menu.active{
-    display: flex;
     flex-direction: column;
   }
   .icon{
@@ -343,14 +343,11 @@ nav{
     margin: 0vmax 1vw 0vmax;
     width: 14vw;
   }
-  .name_ru{
-    display: none;
-  }
-  .name_eng{
-    display: none;
-  }
-  .mobile_name{
+  .mobile_menu_icon, .block.mobile_menu.active, .mobile_name, .mobile_avatar_photo{
     display: flex;
+  }
+  .nav_item, .name_ru, .name_eng, .layer, .parallax_bg{
+    display: none;
   }
 }
 /*Mobile M*/
