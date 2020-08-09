@@ -310,7 +310,7 @@ nav{
 /*Mobile L*/
 @media (max-width: 480px){
   .nav_logo{
-    font-size: 4vw;
+    font-size: 5vw;
     margin: 0vh 3vw;
   }
   .business_card_avatar{
@@ -322,8 +322,8 @@ nav{
     color: #d4d4d4;
   }
   .mobile_menu_icon, .mobile_menu_icon.active{
-    width: 5vw;
-    height: 5vw;
+    width: 6vw;
+    height: 6vw;
   }
   .mobile_menu_icon{
     margin-right: 3vw;
