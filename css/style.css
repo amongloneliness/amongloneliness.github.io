@@ -1,0 +1,263 @@
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0f0f0f;
+  margin: 1vmax 0%;
+}
+
+/*Header и панель навигации*/
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #00000075;
+  z-index: 3;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0% 1%;
+}
+
+.nav_item{
+  color: #e7e7e7;
+  font-weight: normal;
+  font-family: "Roboto-Regular";
+  text-decoration: none;
+  padding: 1.5vh 1vw;
+  font-size: 1.1vmax;
+  margin: 0.2vh 0.5vw;
+}
+
+.nav_item:hover{
+  border-radius: 0.4vmax;
+  background-color: #242424;
+}
+
+.nav_logo{
+  color: #e2e2e2;
+  font-weight: normal;
+  font-family: "Caveat-Regular";
+  text-decoration: none;
+  font-size: 1.3vmax;
+  padding: 1vh 1vw;
+  margin: 0vh 0.4vw;
+}
+
+.nav_special_item{
+  font-family: "Roboto-Medium";
+  background-color: #400000da;
+  border-radius: 0.4vmax;
+}
+
+/*Main и основные блоки сайта*/
+.block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7vh 0%;
+}
+
+/*Main--> Блок-визитка*/
+.business_card{
+  color: #f1f1f1;
+  font-weight: lighter;
+  text-shadow: 0.2vmax black;
+  flex-direction: row;
+  font-size: 1.4vmax;
+}
+
+.sites{
+  margin-right: 6vw;
+}
+
+.names{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name_ru{
+  font-family: "YanoneKaffeesatz-VariableFont_wght";
+  margin-right: 0.5vw;
+}
+
+.name_eng{
+  font-family: "Caveat-Regular";
+  margin-left: 0.5vw;
+}
+
+.icons_conteiner{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon{
+  margin: 1.25vmax 0.4vw 1.25vmax;
+  width: 2.5vmax;
+  transition: all 0.07s ease;
+}
+
+.icon:hover{
+  margin: 0vmax 0.4vw 0vmax;
+  width: 5vmax;
+}
+
+/*Animations--> Icons-color:hover*/
+.soundcloud_icon:hover{
+  filter: contrast(80%) sepia(100%) hue-rotate(-20deg) brightness(0.7) saturate(1000%);
+}
+.facebook_icon:hover{
+  filter: contrast(100%) sepia(100%) hue-rotate(-240deg) brightness(0.5) saturate(1000%);
+}
+.vk_icon:hover{
+  filter: contrast(80%) sepia(100%) hue-rotate(-185deg) brightness(0.4) saturate(1000%);
+}
+.youtube_icon:hover{
+  filter: contrast(30%) sepia(100%) hue-rotate(-45deg) brightness(0.4) saturate(1000%);
+}
+.twitter_icon:hover{
+  filter: contrast(80%) sepia(100%) hue-rotate(-200deg) brightness(0.7) saturate(1000%);
+}
+
+.business_card_avatar{
+  width: 28%;
+  height: 28%;
+  position: relative;
+}
+
+.business_card_avatar img{
+  width: 100%;
+}
+
+.layer{
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.gray_text{
+  color: #242424;
+}
+
+.linkintext{
+  color: #910404;
+}
+
+.whitebackground{
+  background-color: #e2e2e2;
+}
+
+.imgbackground1{
+  background-image: url(../img/background1.jpg);
+  background-attachment: fixed;
+}
+
+.imgbackground2{
+  background-image: url(../img/background2.jpg);
+  background-attachment: fixed;
+}
+
+.imgbackground3{
+  background-image: url(../img/background3.jpg);
+  background-attachment: fixed;
+}
+
+/*Fonts-Шрифты*/
+@font-face{
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face{
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto/Roboto-Light.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face{
+  font-family: "Roboto-Medium";
+  src: url("../fonts/Roboto/Roboto-Medium.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face{
+  font-family: "Caveat-Regular";
+  src: url("../fonts/Caveat/Caveat-Regular.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face{
+  font-family: "YanoneKaffeesatz-VariableFont_wght";
+  src: url("../fonts/Yanone_Kaffeesatz/YanoneKaffeesatz-VariableFont_wght.ttf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*Media запросы*/
+/*4K Displays*/
+@media (max-width: 2560px){
+  .nav_item{
+    padding: 1.8vh 1.2vw;
+  }
+}
+/*Laptop L*/
+@media (max-width: 1440px){
+}
+/*Laptop-1024px*/
+@media (max-width: 1024px){
+  .nav_item{
+    font-size: 1.4vmax;
+  }
+  .nav_logo{
+    font-size: 1.8vmax;
+  }
+  .business_card{
+    font-size: 1.5vmax;
+  }
+  .icon{
+    width: 3vmax;
+  }
+}
+/*Tablet*/
+@media (max-width: 768px){
+  .nav_item{
+    font-size: 1.6vmax;
+    padding: 1.4vmax;
+  }
+  .nav_logo{
+    font-size: 2.2vmax;
+  }
+  .business_card{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .sites{
+    order:1;
+    margin-right: 0%;
+  }
+}
+/*Mobile L*/
+@media (max-width: 425px){
+}
+/*Mobile M*/
+@media (max-width: 375px){
+}
+/*Mobile S*/
+@media (max-width: 320px){
+}
+/*Mobile minimall*/
+@media (max-width: 240px){
+}
