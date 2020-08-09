@@ -58,6 +58,33 @@ nav{
   border-radius: 0.4vmax;
 }
 
+.mobile_menu_icon{
+  display: none;
+}
+
+.block.mobile_menu{
+  display: none;
+  padding-top: 12vw;
+  background-color: #000000b7;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+}
+
+.mobile_menu_item{
+  text-decoration: none;
+  color: #e2e2e2;
+  font-size: 3.8vw;
+  padding: 1vw 8vw;
+  margin: 1vw 0vw;
+}
+
+.mobile_menu_item:hover{
+  background-color: #242424;
+  border-radius: 5%;
+}
+
 /*Main и основные блоки сайта*/
 .block{
   display: flex;
@@ -84,6 +111,7 @@ nav{
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .name_ru{
@@ -94,6 +122,12 @@ nav{
 .name_eng{
   font-family: "Caveat-Regular";
   margin-left: 0.5vw;
+}
+
+.mobile_name{
+  font-family: "YanoneKaffeesatz-VariableFont_wght";
+  display: none;
+  font-weight: lighter;
 }
 
 .icons_conteiner{
@@ -274,18 +308,54 @@ nav{
     display: none;
   }
   .nav_logo{
-    font-size: 7vw;
+    font-size: 4vw;
+    margin: 0vh 3vw;
   }
   .business_card_avatar{
     width: 80%;
     height: 80%;
   }
   .business_card{
-    font-size: 4vw;
+    font-size: 3vw;
+    color: #d4d4d4;
+  }
+  .mobile_menu_icon{
+    display: flex;
+    width: 5vw;
+    height: 5vw;
+    margin-right: 3vw;
+  }
+  .mobile_menu_icon.active{
+    width: 5vw;
+    height: 5vw;
+    opacity: 0.4;
+  }
+  .block.mobile_menu.active{
+    display: flex;
+    flex-direction: column;
+  }
+  .icon{
+    margin: 2.5vw 1vw 2.5vw;
+    width: 9vw;
+    transition: all 0.07s ease;
+  }
+  .icon:hover{
+    margin: 0vmax 1vw 0vmax;
+    width: 14vw;
+  }
+  .name_ru{
+    display: none;
+  }
+  .name_eng{
+    display: none;
+  }
+  .mobile_name{
+    display: flex;
   }
 }
 /*Mobile M*/
 @media (max-width: 375px){
+
 }
 /*Mobile S*/
 @media (max-width: 320px){
