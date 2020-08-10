@@ -159,11 +159,17 @@ nav{
 .vk_icon:hover{
   filter: contrast(80%) sepia(100%) hue-rotate(-185deg) brightness(0.4) saturate(1000%);
 }
+.github_icon:hover{
+  filter: contrast(80%) sepia(100%) hue-rotate(-60deg) brightness(1) saturate(1000%);
+}
 .youtube_icon:hover{
   filter: contrast(30%) sepia(100%) hue-rotate(-45deg) brightness(0.4) saturate(1000%);
 }
 .twitter_icon:hover{
   filter: contrast(80%) sepia(100%) hue-rotate(-200deg) brightness(0.7) saturate(1000%);
+}
+.linkedin_icon:hover{
+  filter: contrast(80%) sepia(100%) hue-rotate(-185deg) brightness(0.5) saturate(1000%);
 }
 
 .business_card_avatar{
