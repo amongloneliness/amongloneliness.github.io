@@ -58,6 +58,7 @@ nav{
   border-radius: 0.4vmax;
 }
 
+/*Мобильная версия -> навигация*/
 .mobile_menu_icon{
   display: none;
 }
@@ -149,6 +150,47 @@ nav{
   width: 5vmax;
 }
 
+.business_card_avatar{
+  width: 28%;
+  height: 28%;
+  position: relative;
+  margin: 1vw 0vw;
+}
+
+.business_card_avatar img{
+  width: 100%;
+}
+
+.mobile_avatar_photo{
+  display: none;
+}
+
+.layer{
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/*Main--> Блок-Обо Мне*/
+.about_me{
+  display: block;
+  background-color: #e2e2e2;
+  font-family: "Roboto-Regular";
+}
+
+article h1{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.7vw;
+}
+
+article{
+  padding: 0% 30%;
+  font-size: 1.2vw;
+  line-height: 2.2vmax;
+}
+
+
 /*Animations--> Icons-color:hover*/
 .soundcloud_icon:hover{
   filter: contrast(80%) sepia(100%) hue-rotate(-20deg) brightness(0.7) saturate(1000%);
@@ -172,25 +214,6 @@ nav{
   filter: contrast(80%) sepia(100%) hue-rotate(-185deg) brightness(0.5) saturate(1000%);
 }
 
-.business_card_avatar{
-  width: 28%;
-  height: 28%;
-  position: relative;
-}
-
-.business_card_avatar img{
-  width: 100%;
-}
-
-.mobile_avatar_photo{
-  display: none;
-}
-
-.layer{
-  position: absolute;
-  left: 0;
-  right: 0;
-}
 
 .gray_text{
   color: #242424;
@@ -218,6 +241,7 @@ nav{
   background-image: url(../img/background3.jpg);
   background-attachment: fixed;
 }
+
 
 /*Fonts-Шрифты*/
 @font-face{
@@ -256,6 +280,7 @@ nav{
   font-display: block;
 }
 
+
 /*Media запросы*/
 /*4K Displays*/
 @media (max-width: 2560px){
@@ -279,6 +304,11 @@ nav{
   }
   .icon{
     width: 3vmax;
+  }
+  article{
+    padding: 0% 25%;
+    font-size: 1.5vw;
+    line-height: 2.7vw;
   }
 }
 /*Tablet*/
@@ -311,6 +341,14 @@ nav{
   .icon:hover{
     margin: 0vmax 0.7vw 0vmax;
     width: 10vw;
+  }
+  article h1{
+    margin-bottom: 4.5vw;
+  }
+  article{
+    padding: 0% 25%;
+    font-size: 2.4vw;
+    line-height: 4vw;
   }
 }
 /*Mobile L*/
@@ -354,6 +392,14 @@ nav{
   }
   .nav_item, .name_ru, .name_eng, .layer, .parallax_bg{
     display: none;
+  }
+  article h1{
+    margin-bottom: 8vw;
+  }
+  article{
+    padding: 0% 12%;
+    font-size: 3.5vw;
+    line-height: 6vw;
   }
 }
 /*Mobile M*/
