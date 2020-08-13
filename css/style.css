@@ -105,7 +105,20 @@ nav{
   font-size: 1.4vmax;
 }
 
+.business_card_avatar{
+  order: 2;
+  width: 28%;
+  height: 28%;
+  position: relative;
+  margin: 1vw 0vw;
+}
+
+.business_card_avatar img{
+  width: 100%;
+}
+
 .sites{
+  order: 1;
   margin-right: 6vw;
 }
 
@@ -148,17 +161,6 @@ nav{
 .icon:hover{
   margin: 0vmax 0.4vw 0vmax;
   width: 5vmax;
-}
-
-.business_card_avatar{
-  width: 28%;
-  height: 28%;
-  position: relative;
-  margin: 1vw 0vw;
-}
-
-.business_card_avatar img{
-  width: 100%;
 }
 
 .mobile_avatar_photo{
