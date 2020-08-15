@@ -1,3 +1,37 @@
+/*Preloader страницы*/
+.preloader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: #f1f1f1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.preloader img{
+  width: 150px; 
+  image-rendering: pixelated; 
+  min-width: 75px;
+}
+
+.preloader label{
+  margin-top: 1vw;
+  font-size: 1vw;
+}
+
+.preloader.loaded{
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.preloader.done{
+  display: none;
+}
 
 body{
   display: flex;
@@ -290,9 +324,18 @@ article{
 }
 /*Laptop L*/
 @media (max-width: 1440px){
+  .preloader img{
+    width: 75px;
+  }
+  .preloader label{
+    font-size: 1.2vw;
+  }
 }
 /*Laptop-1024px*/
 @media (max-width: 1024px){
+  .preloader label{
+    font-size: 1.5vw;
+  }
   .nav_item{
     font-size: 1.4vmax;
   }
@@ -313,6 +356,9 @@ article{
 }
 /*Tablet*/
 @media (max-width: 768px){
+  .preloader label{
+    font-size: 1.8vw;
+  }
   .nav_item{
     font-size: 2vw;
     padding: 1.4vw;
@@ -353,6 +399,9 @@ article{
 }
 /*Mobile L*/
 @media (max-width: 480px){
+  .preloader label{
+    font-size: 3vw;
+  }
   .nav_logo{
     font-size: 5vw;
     margin: 0vh 3vw;
@@ -408,7 +457,21 @@ article{
 }
 /*Mobile S*/
 @media (max-width: 320px){
+  .preloader label{
+    font-size: 3.8vw;
+  }
 }
 /*Mobile minimall*/
 @media (max-width: 240px){
+  .preloader label{
+    font-size: 4vw;
+  }
+  article h1{
+    margin-bottom: 8vw;
+  }
+  article{
+    padding: 0% 12%;
+    font-size: 4.2vw;
+    line-height: 6vw;
+  }
 }
