@@ -70,16 +70,16 @@ function PauseOrPlay() {
   } else {
     song.pause();
   }
-  document.getElementById("play").classList.toggle("active");
-  document.getElementById("pause").classList.toggle("active");
+  document.getElementById("play").classList.toggle("nonactive");
+  document.getElementById("pause").classList.toggle("nonactive");
   main_title.textContent = song_title.textContent;
 }
 
 function Stop() {
   song.pause();
   song.currentTime = 0;
-  document.getElementById("play").classList.value = "play-pause active";
-  document.getElementById("pause").classList.value = "play-pause";
+  document.getElementById("play").classList.value = "play-pause";
+  document.getElementById("pause").classList.value = "play-pause nonactive";
   main_title.textContent = backup_main_title;
 }
 
@@ -125,8 +125,8 @@ function RewindL() {
 
 function Play() {
   Load();
-  document.getElementById("play").classList.value = "play-pause";
-  document.getElementById("pause").classList.value = "play-pause active";
+  document.getElementById("play").classList.value = "play-pause nonactive";
+  document.getElementById("pause").classList.value = "play-pause";
   setTimeout(function () {
     song.play();
   }, 700);

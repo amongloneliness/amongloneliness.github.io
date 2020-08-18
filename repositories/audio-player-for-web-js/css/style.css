@@ -128,17 +128,14 @@ body {
 }
 
 .button img {
+  display: inherit;
   image-rendering: optimizeQuality;
   width: 2vmin;
   height: 2vmin;
 }
 
-.play-pause {
+.play-pause.nonactive {
   display: none;
-}
-
-.play-pause.active {
-  display: inherit;
 }
 
 #prev,
