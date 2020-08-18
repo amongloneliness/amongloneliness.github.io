@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../audio-player-for-web-js/css/style.css">
   <!--Иконка для браузера размером 64 x 64 -->
-  <link rel="shortcut icon" href="../Audio-Player-JS/favicon.png">
+  <link rel="shortcut icon" href="../audio-player-for-web-js/favicon.png">
   <title>Audio Player JS</title>
 </head>
 <body>
 
   <!-- ========== Audio PLayer ========== -->
   <div id="audio-player">
-    <img id="audio-picture" src="audio/default.jpg" alt="song picture" class="zero-opacity">
+    <img id="audio-picture" src="../audio-player-for-web-js/audio/default.jpg" alt="song picture" class="zero-opacity">
 
     <div id="audio-panel">
       <div id="song-title" class="zero-opacity">Audio Title</div>
@@ -22,23 +22,23 @@
         <div id="current-time">00:00 / 00:00</div>
         <div id="controls">
           <button onclick="Prev()" class="button">
-            <img id="prev" src="../Audio-Player-JS/icons/Next.png" alt="next icon">
+            <img id="prev" src="../audio-player-for-web-js/icons/Next.png" alt="next icon">
           </button>
           <button onclick="RewindL()" class="button">
-            <img id="rewind-l" src="../Audio-Player-JS/icons/Rewind.png" alt="rewind icon">
+            <img id="rewind-l" src="../audio-player-for-web-js/icons/Rewind.png" alt="rewind icon">
           </button>
           <button onclick="PauseOrPlay()" class="button">
-            <img id="play" class="play-pause active" src="../Audio-Player-JS/icons/Play.png" alt="play icon">
-            <img id="pause" class="play-pause" src="../Audio-Player-JS/icons/Pause.png" alt="play or pause icon">
+            <img id="play" class="play-pause active" src="../audio-player-for-web-js/icons/Play.png" alt="play icon">
+            <img id="pause" class="play-pause" src="../audio-player-for-web-js/icons/Pause.png" alt="play or pause icon">
           </button>
           <button onclick="Stop()" class="button">
-            <img id="stop" src="../Audio-Player-JS/icons/Stop.png" alt="stop icon">
+            <img id="stop" src="../audio-player-for-web-js/icons/Stop.png" alt="stop icon">
           </button>
           <button onclick="RewindR()" class="button">
-            <img id="rewind-r" src="../Audio-Player-JS/icons/Rewind.png" alt="rewind icon">
+            <img id="rewind-r" src="../audio-player-for-web-js/icons/Rewind.png" alt="rewind icon">
           </button>
           <button onclick="Next()" class="button">
-            <img id="next" src="../Audio-Player-JS/icons/Next.png" alt="next icon">
+            <img id="next" src="../audio-player-for-web-js/icons/Next.png" alt="next icon">
           </button>
         </div>
       </div>
@@ -46,7 +46,7 @@
   </div>
 
 <!-- ========== Scripts: Audio player and loading transition ========== -->
-  <script src="js/audio-player.js"></script>
+  <script src="../audio-player-for-web-js/js/audio-player.js"></script>
   <script>
     document.body.onload = function () {
       document.getElementById("audio-player").style.opacity = "1";

@@ -30,9 +30,9 @@ song.addEventListener('timeupdate', function () {
 
 // Loding song
 function Load() {
-  song.src = "../Audio-Player-JS/audio/" + songs[current_song] + ".mp3";
+  song.src = "../audio-player-for-web-js/audio/" + songs[current_song] + ".mp3";
   song_title.textContent = songs[current_song];
-  song_picture.src = "../Audio-Player-JS/audio/" + songs[current_song] + ".jpg";
+  song_picture.src = "../audio-player-for-web-js/audio/" + songs[current_song] + ".jpg";
 
   Visible_Transition(song_title, song_picture);
 
