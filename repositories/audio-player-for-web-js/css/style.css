@@ -1,0 +1,154 @@
+body {
+  font-family: oswald-regular;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #f3f3f3;
+}
+
+/* Flex elements */
+
+#audio-player,
+#audio-panel,
+#song-title,
+#seek-bar,
+#bottom-panel,
+#controls {
+  display: inherit;
+}
+
+#audio-player {
+  transition: opacity 2s linear;
+  opacity: 0;
+  align-items: inherit;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: inherit;
+  border-radius: 2%;
+  width: 75vmin;
+  height: 25vmin;
+  box-shadow: 0 0 1vmax rgba(0, 0, 0, 0.527);
+}
+
+#audio-picture {
+  transition: opacity 300ms linear;
+  margin: 0 0 0 3.5vmin;
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 2.25vmin;
+}
+
+.zero-opacity {
+  opacity: 0;
+}
+
+#audio-panel {
+  flex-direction: column;
+  width: 42vmin;
+  margin: 6vmin;
+}
+
+#song-title {
+  transition: opacity 300ms linear;
+  justify-content: left;
+  font-size: 2.3vmin;
+}
+
+#seek-bar {
+  -webkit-appearance: none;
+  outline: none;
+  align-items: inherit;
+  width: 42vmin;
+  height: .6vmin;
+  margin: 2vmin 0;
+  border-radius: 2%;
+  cursor: pointer;
+  background-color: #8080805d;
+}
+
+#seek-bar:hover::-webkit-slider-thumb {
+  opacity: 1;
+  width: .6vmin;
+  border-radius: .3vmin;
+  transform: scale(2);
+}
+
+#seek-bar::-webkit-slider-thumb {
+  transition: all 200ms linear;
+  -webkit-appearance: none;
+  opacity: .5;
+  height: .6vmin;
+  width: 5%;
+  background-color: #000;
+}
+
+#bottom-panel {
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+#current-time {
+  font-size: 2vmin;
+}
+
+/* Controls - Buttons - Icons */
+
+#controls {
+  flex-direction: inherit;
+  align-items: inherit;
+  height: 2vmin;
+}
+
+.button {
+  padding: 0;
+  margin: 0 1.2vmin;
+  width: 2vmin;
+  height: 2vmin;
+  border-radius: .85vmin;
+  outline: none;
+  border-style: none;
+  cursor: pointer;
+}
+
+.button:active,
+.button img:active {
+  width: 2.5vmin;
+  height: 2.5vmin;
+}
+
+.button:active {
+  margin: 0 .95vmin;
+}
+
+.button img {
+  image-rendering: optimizeQuality;
+  width: 2vmin;
+  height: 2vmin;
+}
+
+.play-pause {
+  display: none;
+}
+
+.play-pause.active {
+  display: inherit;
+}
+
+#prev,
+#rewind-l {
+  transform: scale(-1, 1);
+}
+
+/* Main Font */
+@font-face {
+  font-family: oswald-regular;
+  src: url(../fonts/Oswald-Regular.ttf);
+  font: normal normal;
+}
