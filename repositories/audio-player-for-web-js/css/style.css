@@ -16,6 +16,7 @@ body {
 
 #audio-player,
 #audio-panel,
+#top-panel,
 #song-title,
 #seek-bar,
 #bottom-panel,
@@ -54,38 +55,60 @@ body {
   margin: 6vmin;
 }
 
+#top-panel {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 #song-title {
   transition: opacity 300ms linear;
   justify-content: left;
   font-size: 2.3vmin;
 }
 
+#volume, 
 #seek-bar {
   -webkit-appearance: none;
   outline: none;
   align-items: inherit;
-  width: 42vmin;
   height: .6vmin;
   margin: 2vmin 0;
-  border-radius: 2%;
   cursor: pointer;
   background-color: #8080805d;
+  border-radius: 2%;
 }
 
-#seek-bar:hover::-webkit-slider-thumb {
+#volume {
+  width: 4vmin;
+}
+
+#seek-bar {
+  width: 42vmin;
+}
+
+#seek-bar:hover::-webkit-slider-thumb,
+#volume:hover::-webkit-slider-thumb {
   opacity: 1;
   width: .6vmin;
   border-radius: .3vmin;
   transform: scale(2);
 }
 
-#seek-bar::-webkit-slider-thumb {
+#seek-bar::-webkit-slider-thumb,
+#volume::-webkit-slider-thumb {
   transition: all 200ms linear;
   -webkit-appearance: none;
   opacity: .5;
   height: .6vmin;
-  width: 5%;
   background-color: #000;
+}
+
+#volume::-webkit-slider-thumb{
+  width: 20%;
+}
+
+#seek-bar::-webkit-slider-thumb{
+  width: 5%;
 }
 
 #bottom-panel {

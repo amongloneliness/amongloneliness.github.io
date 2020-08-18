@@ -15,7 +15,10 @@
     <img id="audio-picture" src="../audio-player-for-web-js/audio/default.jpg" alt="song picture" class="zero-opacity">
 
     <div id="audio-panel">
-      <div id="song-title" class="zero-opacity">Audio Title</div>
+      <div id="top-panel">
+        <div id="song-title" class="zero-opacity">Audio Title</div>
+        <input id="volume" type="range" min="0" max="1" step="0.01" value="1" onchange="VolSong()">
+      </div>
       <input id="seek-bar" type="range" min="0" step="1" value="0" onchange="SeekSong()">
 
       <div id="bottom-panel">

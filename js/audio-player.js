@@ -11,7 +11,6 @@ var current_song = 0;
 var song_duration = "00:00";
 var song_title = document.getElementById("song-title");
 var song_slider = document.getElementById("seek-bar");
-var song_vol_slider = document.getElementById("volume");
 var song_picture = document.getElementById("audio-picture");
 var current_time = document.getElementById("current-time");
 
@@ -38,7 +37,6 @@ function Load() {
   Visible_Transition(song_title, song_picture);
 
   song_slider.value = 0;
-
   setTimeout(function () {
     song_slider.setAttribute("max", Math.round(song.duration));
     song_duration = ConvertTime(Math.round(song.duration));
@@ -137,8 +135,4 @@ function Play() {
 function SeekSong() {
   song.currentTime = song_slider.value;
   current_time.textContent = "00:00 / " + song_duration;
-}
-
-function VolSong() {
-  song.volume = song_vol_slider.value;
 }
