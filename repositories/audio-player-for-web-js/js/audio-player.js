@@ -44,6 +44,10 @@ function Load() {
     song_duration = ConvertTime(Math.round(song.duration));
     current_time.textContent = "00:00 / " + song_duration;
   }, 1100);
+  if (song_duration == NaN) {
+    song_duration = ConvertTime(Math.round(song.duration));
+    current_time.textContent = "00:00 / " + song_duration;
+  }
 }
 
 // Convert time to required format
