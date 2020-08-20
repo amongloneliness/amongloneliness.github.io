@@ -1,8 +1,35 @@
-/*Preloader страницы*/
-.preloader{
+/* ~~~~~~~~~~~~~~~~ page author: kerimov vugar (amongloneliness) ~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~           site version: for any device        ~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~           domain: amongloneliness.github.io   ~~~~~~~~~~~~~~~~
+  ~~~~~~~~~~~~~~~~                     - all rights reserved ©   ~~~~~~~~~~~~~~~~
+*/
+
+/* ================================ flex elements ================================ */
+body,
+.preloader,
+header,
+nav,
+.block,
+.names,
+.icons-conteiner,
+article h1 {
   display: flex;
+}
+
+/* ================================ ~ body ~ ================================*/
+
+body{
   flex-direction: column;
   justify-content: center;
+  background-color: #0f0f0f;
+  margin: 1vmax 0;
+}
+
+
+/* ================================ preloader of page ================================ */
+.preloader{
+  flex-direction: inherit;
+  justify-content: inherit;
   align-items: center;
   position: fixed;
   background-color: #f1f1f1;
@@ -25,7 +52,7 @@
 }
 
 .preloader.loaded{
-  transition: 0.3s opacity;
+  transition: .3s opacity;
   opacity: 0;
 }
 
@@ -33,19 +60,11 @@
   display: none;
 }
 
-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #0f0f0f;
-  margin: 1vmax 0%;
-}
 
-/*Header и панель навигации*/
+/* ================================ header of page ================================*/
 header{
-  display: flex;
   justify-content: space-between;
-  padding: 0.5%;
+  padding: .5%;
   position: fixed;
   left: 0;
   top: 0;
@@ -54,51 +73,62 @@ header{
   z-index: 3;
 }
 
+/* ======== header -> navigation panel */
 nav{
-  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0% 1%;
+  padding: 0 1%;
 }
 
-.nav_item{
-  color: #e7e7e7;
-  font-weight: normal;
-  font-family: "Roboto-Regular";
+.nav-item, 
+.nav-logo {
   text-decoration: none;
+}
+
+.nav-logo{
+  color: #e2e2e2;
+  font-family: "Caveat-Regular";
+  font-size: 1.3vmax;
+  padding: 1vh 1vw;
+  margin: 0 .4vw;
+}
+
+.nav-item{
+  color: #e7e7e7;
+  font-family: "Roboto-Regular";
   padding: 1.5vh 1vw;
   font-size: 1.1vmax;
-  margin: 0.2vh 0.5vw;
+  margin: .2vh .5vw;
 }
 
-.nav_item:hover{
-  border-radius: 0.4vmax;
+.nav-item:hover{
+  border-radius: .4vmax;
   background-color: #242424;
 }
 
-.nav_logo{
-  color: #e2e2e2;
-  font-weight: normal;
-  font-family: "Caveat-Regular";
-  text-decoration: none;
-  font-size: 1.3vmax;
-  padding: 1vh 1vw;
-  margin: 0vh 0.4vw;
-}
-
-.nav_special_item{
+.nav-special-item{
   font-family: "Roboto-Medium";
   background-color: #400000da;
-  border-radius: 0.4vmax;
+  border-radius: .4vmax;
 }
 
-/*Мобильная версия -> навигация*/
-.mobile_menu_icon{
+/* ================================ main content ================================ */
+/* ======== main content -> blocks */
+.block{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 7vh 0;
+}
+
+/* ======== main content -> mobile navigation panel */
+.mobile-menu-icon,
+.block.mobile-menu,
+.mobile-menu-item {
   display: none;
 }
 
-.block.mobile_menu{
-  display: none;
+.block.mobile-menu{
   padding-top: 12vw;
   background-color: #000000b7;
   position: fixed;
@@ -108,33 +138,23 @@ nav{
   right: 0;
 }
 
-.mobile_menu_item{
-  text-decoration: none;
+.mobile-menu-item{
   color: #e2e2e2;
   font-size: 3.8vw;
   padding: 1vw 8vw;
-  margin: 1vw 0vw;
+  margin: 1vw 0;
 }
 
-.mobile_menu_item:hover{
+.mobile-menu-item:hover{
   background-color: #242424;
   border-radius: 5%;
 }
 
-/*Main и основные блоки сайта*/
-.block{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 7vh 0%;
-}
-
-/*Main--> Блок-визитка*/
-.business_card{
+/* ======== main content -> block: business-card*/
+.business-card{
   color: #f1f1f1;
   font-weight: lighter;
-  text-shadow: 0.2vmax black;
+  text-shadow: .2vmax black;
   flex-direction: row;
   font-size: 1.4vmax;
 }
@@ -144,59 +164,47 @@ nav{
 }
 
 .names{
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.name_ru{
+.name-ru{
   font-family: "YanoneKaffeesatz-VariableFont_wght";
-  margin-right: 0.5vw;
+  margin-right: .5vw;
 }
 
-.name_eng{
+.name-eng{
   font-family: "Caveat-Regular";
-  margin-left: 0.5vw;
+  margin-left: .5vw;
 }
 
-.mobile_name{
-  font-family: "YanoneKaffeesatz-VariableFont_wght";
-  display: none;
-  font-weight: lighter;
-}
-
-.icons_conteiner{
-  display: flex;
+.icons-conteiner{
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .icon{
-  margin: 1.25vmax 0.4vw 1.25vmax;
+  margin: 1.25vmax .4vw 1.25vmax;
   width: 2.5vmax;
-  transition: all 0.07s ease;
+  transition: all .07s ease;
 }
 
 .icon:hover{
-  margin: 0vmax 0.4vw 0vmax;
+  margin: 0 0.4vw 0;
   width: 5vmax;
 }
 
-.business_card_avatar{
+.business-card-avatar{
   width: 28%;
   height: 28%;
   position: relative;
-  margin: 1vw 0vw;
+  margin: 1vw 0;
 }
 
-.business_card_avatar img{
+.business-card-avatar img{
   width: 100%;
-}
-
-.mobile_avatar_photo{
-  display: none;
 }
 
 .layer{
@@ -205,79 +213,99 @@ nav{
   right: 0;
 }
 
-/*Main--> Блок-Обо Мне*/
-.about_me{
+/* ============ main content -> block: business-card -> mobile version of this block */
+.mobile-avatar-photo,
+.mobile-name {
+  display: none;
+}
+
+.mobile-name {
+  font-family: "YanoneKaffeesatz-VariableFont_wght";
+  font-weight: lighter;
+}
+
+/* ============ main content -> block: business-card -> icons-conteiner: animations*/
+.soundcloud-icon:hover {
+  filter: contrast(80%) sepia(100%) hue-rotate(-20deg) brightness(0.7) saturate(1000%);
+}
+
+.facebook-icon:hover {
+  filter: contrast(100%) sepia(100%) hue-rotate(-240deg) brightness(0.5) saturate(1000%);
+}
+
+.vk-icon:hover {
+  filter: contrast(80%) sepia(100%) hue-rotate(-185deg) brightness(0.4) saturate(1000%);
+}
+
+.github-icon:hover {
+  filter: contrast(80%) sepia(100%) hue-rotate(-60deg) brightness(1) saturate(1000%);
+}
+
+.youtube-icon:hover {
+  filter: contrast(30%) sepia(100%) hue-rotate(-45deg) brightness(0.4) saturate(1000%);
+}
+
+.twitter-icon:hover {
+  filter: contrast(80%) sepia(100%) hue-rotate(-200deg) brightness(0.7) saturate(1000%);
+}
+
+.linkedin-icon:hover {
+  filter: contrast(80%) sepia(100%) hue-rotate(-185deg) brightness(0.5) saturate(1000%);
+}
+
+/* ======== main content -> block: about me */
+.about-me{
   display: block;
   background-color: #e2e2e2;
   font-family: "Roboto-Regular";
 }
 
 article h1{
-  display: flex;
   justify-content: center;
   margin-bottom: 2.7vw;
 }
 
 article{
-  padding: 0% 30%;
+  padding: 0 30%;
   font-size: 1.2vw;
   line-height: 2.2vmax;
 }
 
 
-/*Animations--> Icons-color:hover*/
-.soundcloud_icon:hover{
-  filter: contrast(80%) sepia(100%) hue-rotate(-20deg) brightness(0.7) saturate(1000%);
-}
-.facebook_icon:hover{
-  filter: contrast(100%) sepia(100%) hue-rotate(-240deg) brightness(0.5) saturate(1000%);
-}
-.vk_icon:hover{
-  filter: contrast(80%) sepia(100%) hue-rotate(-185deg) brightness(0.4) saturate(1000%);
-}
-.github_icon:hover{
-  filter: contrast(80%) sepia(100%) hue-rotate(-60deg) brightness(1) saturate(1000%);
-}
-.youtube_icon:hover{
-  filter: contrast(30%) sepia(100%) hue-rotate(-45deg) brightness(0.4) saturate(1000%);
-}
-.twitter_icon:hover{
-  filter: contrast(80%) sepia(100%) hue-rotate(-200deg) brightness(0.7) saturate(1000%);
-}
-.linkedin_icon:hover{
-  filter: contrast(80%) sepia(100%) hue-rotate(-185deg) brightness(0.5) saturate(1000%);
-}
+/* ================================ classes for blocks design ================================ */
 
-
-.gray_text{
+.gray-text{
   color: #242424;
 }
 
-.linkintext{
+.linkin-text{
   color: #910404;
 }
 
-.whitebackground{
+.white-background{
   background-color: #e2e2e2;
 }
 
-.imgbackground1{
+.img-background1,
+.img-background2,
+.img-background3 {
+  background-attachment: fixed;
+}
+
+.img-background1{
   background-image: url(../img/background1.jpg);
-  background-attachment: fixed;
 }
 
-.imgbackground2{
+.img-background2{
   background-image: url(../img/background2.jpg);
-  background-attachment: fixed;
 }
 
-.imgbackground3{
+.img-background3{
   background-image: url(../img/background3.jpg);
-  background-attachment: fixed;
 }
 
 
-/*Fonts-Шрифты*/
+/* ================================ font styles for page ================================ */
 @font-face{
   font-family: "Roboto-Regular";
   src: url("../fonts/Roboto/Roboto-Regular.ttf");
@@ -315,163 +343,219 @@ article{
 }
 
 
-/*Media запросы*/
-/*4K Displays*/
-@media (max-width: 2560px){
-  .nav_item{
+/* ================================ media queries ================================ */
+/* ========= media quires -> for 4k monitors */
+@media (max-width: 2560px) {
+
+  .nav-item {
     padding: 1.8vh 1.2vw;
   }
+
 }
-/*Laptop L*/
-@media (max-width: 1440px){
-  .preloader img{
+
+/* ========= media quires -> for laptop l */
+@media (max-width: 1440px) {
+
+  .preloader img {
     width: 75px;
   }
-  .preloader label{
+
+  .preloader label {
     font-size: 1.2vw;
   }
+
 }
-/*Laptop-1024px*/
-@media (max-width: 1024px){
-  .preloader label{
+
+/* ========= media quires -> for laptop-1024px */
+@media (max-width: 1024px) {
+
+  .preloader label {
     font-size: 1.5vw;
   }
-  .nav_item{
+
+  .nav-item {
     font-size: 1.4vmax;
   }
-  .nav_logo{
+
+  .nav-logo {
     font-size: 1.8vmax;
   }
-  .business_card{
+
+  .business-card {
     font-size: 1.5vmax;
   }
-  .icon{
+
+  .icon {
     width: 3vmax;
   }
-  article{
-    padding: 0% 25%;
+
+  article {
+    padding: 0 25%;
     font-size: 1.5vw;
     line-height: 2.7vw;
   }
+
 }
-/*Tablet*/
-@media (max-width: 768px){
-  .preloader label{
+/* ========= media quires -> for tablet */
+@media (max-width: 768px) {
+
+  .preloader label {
     font-size: 1.8vw;
   }
-  .nav_item{
+
+  .nav-item{
     font-size: 2vw;
     padding: 1.4vw;
   }
-  .nav_logo{
+
+  .nav-logo {
     font-size: 3vw;
   }
-  .business_card{
+
+  .business-card {
     flex-direction: column;
     justify-content: center;
     font-size: 3vw;
   }
-  .sites{
+
+  .sites {
     order:1;
-    margin-right: 0%;
+    margin-right: 0;
   }
-  .business_card_avatar{
+
+  .business-card-avatar {
     width: 40%;
     height: 40%;
   }
-  .icon{
-    margin: 2vw 0.7vw 2vw;
+
+  .icon {
+    margin: 2vw .7vw 2vw;
     width: 6vw;
-    transition: all 0.07s ease;
+    transition: all .07s ease;
   }
-  .icon:hover{
-    margin: 0vmax 0.7vw 0vmax;
+
+  .icon:hover {
+    margin: 0 .7vw 0;
     width: 10vw;
   }
-  article h1{
+
+  article h1 {
     margin-bottom: 4.5vw;
   }
-  article{
-    padding: 0% 25%;
+
+  article {
+    padding: 0 25%;
     font-size: 2.4vw;
     line-height: 4vw;
   }
+
 }
-/*Mobile L*/
+
+/* ========= media quires -> mobile l */
 @media (max-width: 480px){
-  .preloader label{
+
+  .preloader label {
     font-size: 3vw;
   }
-  .nav_logo{
+
+  .nav-logo {
     font-size: 5vw;
-    margin: 0vh 3vw;
+    margin: 0 3vw;
   }
-  .business_card_avatar{
+
+  .business-card-avatar {
     width: 80%;
     height: 80%;
   }
-  .business_card{
+
+  .business-card {
     font-size: 3vw;
     color: #d4d4d4;
   }
-  .mobile_menu_icon, .mobile_menu_icon.active{
+
+  .mobile-menu-icon, 
+  .mobile-menu-icon.active {
     width: 6vw;
     height: 6vw;
   }
-  .mobile_menu_icon{
+
+  .mobile-menu-icon {
     margin-right: 3vw;
   }
-  .mobile_menu_icon.active{
-    opacity: 0.4;
+
+  .mobile-menu-icon.active {
+    opacity: .4;
   }
-  .block.mobile_menu.active{
+
+  .block.mobile-menu.active {
     flex-direction: column;
   }
-  .icon{
+
+  .icon {
     margin: 2.5vw 1vw 2.5vw;
     width: 9vw;
-    transition: all 0.07s ease;
+    transition: all .07s ease;
   }
-  .icon:hover{
-    margin: 0vmax 1vw 0vmax;
+
+  .icon:hover {
+    margin: 0 1vw 0;
     width: 14vw;
   }
-  .mobile_menu_icon, .block.mobile_menu.active, .mobile_name, .mobile_avatar_photo{
+
+  .mobile-menu-icon, 
+  .block.mobile-menu.active, 
+  .mobile-name, 
+  .mobile-avatar-photo,
+  .mobile-menu-item {
     display: flex;
   }
-  .nav_item, .name_ru, .name_eng, .layer, .parallax_bg{
+
+  .nav-item, 
+  .name-ru, 
+  .name-eng, 
+  .layer, 
+  .parallax-bg {
     display: none;
   }
-  article h1{
+
+  article h1 {
     margin-bottom: 8vw;
   }
-  article{
-    padding: 0% 12%;
+
+  article {
+    padding: 0 12%;
     font-size: 3.5vw;
     line-height: 6vw;
   }
+  
 }
-/*Mobile M*/
-@media (max-width: 375px){
 
+/* ========= media quires -> mobile m */
+@media (max-width: 375px) {
 }
-/*Mobile S*/
-@media (max-width: 320px){
-  .preloader label{
+
+/*  ========= media quires -> mobile s */
+@media (max-width: 320px) {
+  .preloader label {
     font-size: 3.8vw;
   }
 }
-/*Mobile minimall*/
-@media (max-width: 240px){
-  .preloader label{
+
+/* ========= media quires -> small mobile */
+@media (max-width: 240px) {
+
+  .preloader label {
     font-size: 4vw;
   }
-  article h1{
+
+  article h1 {
     margin-bottom: 8vw;
   }
-  article{
-    padding: 0% 12%;
+
+  article {
+    padding: 0 12%;
     font-size: 4.2vw;
     line-height: 6vw;
   }
+
 }
