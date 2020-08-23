@@ -254,23 +254,43 @@ nav{
 }
 
 /* ======== main content -> block: about me */
-.about-me{
+.about-me {
   display: block;
   background-color: #e2e2e2;
   font-family: "Roboto-Regular";
 }
 
-article h1{
+article h1 {
   justify-content: center;
   margin-bottom: 2.7vw;
 }
 
-article{
+article {
   padding: 0 30%;
   font-size: 1.2vw;
   line-height: 2.2vmax;
 }
 
+
+/* ============ main content -> block: skills*/
+#skills {
+  display: block;
+  background-color: #0f0f0f;
+}
+
+#skills article {
+  font-family: "Roboto-Regular";
+  color: #d4d4d4;
+}
+
+#skills article h1 {
+  background-color: #750202;
+  padding: 1.5vw 3vw;
+}
+
+#skills article p {
+  margin: 2.5vw 0;
+}
 
 /* ================================ classes for blocks design ================================ */
 
@@ -290,6 +310,8 @@ article{
 .img-background2,
 .img-background3 {
   background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 .img-background1{
