@@ -130,7 +130,7 @@ nav{
 
 .block.mobile-menu{
   padding-top: 12vw;
-  background-color: #000000b7;
+  background-color: #000;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -477,6 +477,10 @@ article {
 
 /* ========= media quires -> mobile l */
 @media (max-width: 480px){
+
+  header {
+    background-color: #000;
+  }
 
   .preloader label {
     font-size: 3vw;
