@@ -26,7 +26,7 @@ let box = 32;
 let score = 0;
 let score_add = 0;
 // speed of game
-let speed = 115;
+let speed = 105;
 let speed_add = 0;
 
 // key-of-keyboard
