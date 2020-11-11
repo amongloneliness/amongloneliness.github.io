@@ -70,7 +70,7 @@ let ground = {
 }
 
 let snake = {
-  speed: 67,
+  speed: 70,
   form: [{
     x: 9 * pixelsOfBox,
     y: 11 * pixelsOfBox,
