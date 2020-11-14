@@ -35,6 +35,8 @@ soundGulp.src = "sound/gulp.mp3";
 /* ====== game objects and primitives ====== */
 let gameScore = 0;
 let keyOfKeyboard;
+let indexAnimationFood = 0;
+let indexAnimationPoison = 0;
 let soundEatTemp = soundEatHrum;
 let level = function () {
   if (gameScore >= 60) {
@@ -70,7 +72,7 @@ let ground = {
 }
 
 let snake = {
-  speed: 80,
+  speed: 75,
   form: [{
     x: 9 * pixelsOfBox,
     y: 11 * pixelsOfBox,
@@ -302,7 +304,7 @@ let poison = {
 function UpdateGame() {
   let lvl = level();
   ctx.drawImage(groundImage, 0, 0);
-  DrawingElements(lvl);
+  DrawingElements();
   
   ctx.fillStyle = "white";
   ctx.font = "30px Vernada";
@@ -322,25 +324,25 @@ function direction(event) {
   switch (event.keyCode) {
     case 37:
     case 65:
-      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].x <= snake.form[snake.form.length - 2].x && snake.form[snake.form.length - 1].x != 64)) {
+      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].x <= snake.form[snake.form.length - 2].x && snake.form[snake.form.length - 1].x != 32)) {
         keyOfKeyboard = "left";
       }
       break;
     case 38:
     case 87:
-      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].y <= snake.form[snake.form.length - 2].y && snake.form[snake.form.length - 1].y != 160)) {
+      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].y <= snake.form[snake.form.length - 2].y && snake.form[snake.form.length - 1].y != 128)) {
         keyOfKeyboard = "up";
       }
       break;
     case 39:
     case 68:
-      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].x >= snake.form[snake.form.length - 2].x && snake.form[snake.form.length - 1].x != 512)) {
+      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].x >= snake.form[snake.form.length - 2].x && snake.form[snake.form.length - 1].x != 544)) {
         keyOfKeyboard = "right";
       }
       break;
     case 40:
     case 83:
-      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].y >= snake.form[snake.form.length - 2].y && snake.form[snake.form.length - 1].y != 544)) {
+      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].y >= snake.form[snake.form.length - 2].y && snake.form[snake.form.length - 1].y != 576)) {
         keyOfKeyboard = "down";
       }
       break;
@@ -352,15 +354,33 @@ function direction(event) {
   }
 }
 
-function DrawingElements(lvl) {
-  switch (lvl) {
+function DrawingElements() {
+  switch (level()) {
     case 2:
-      ctx.drawImage(poisonImage, poison.poisonPosition.x, poison.poisonPosition.y);
+      PoisonAnimation();
+      ctx.drawImage(poisonImage, indexAnimationPoison, 0, 32, 32, poison.poisonPosition.x, poison.poisonPosition.y, 32, 32);
     case 1:
-      ctx.drawImage(foodImage, food.foodPosition.x, food.foodPosition.y);
+      FoodAnimation();
+      ctx.drawImage(foodImage, indexAnimationFood, 0, 32, 32, food.foodPosition.x, food.foodPosition.y, 32, 32);
       break;
     default:
       break;
+  }
+}
+
+function PoisonAnimation() {
+  if (indexAnimationPoison < poisonImage.width - 32) {
+    indexAnimationPoison += 32;
+  } else {
+    indexAnimationPoison = 0;
+  }
+}
+
+function FoodAnimation() {
+  if (indexAnimationFood < foodImage.width - 32) {
+    indexAnimationFood += 32;
+  } else {
+    indexAnimationFood = 0;
   }
 }
 
