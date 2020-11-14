@@ -324,25 +324,29 @@ function direction(event) {
   switch (event.keyCode) {
     case 37:
     case 65:
-      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].x <= snake.form[snake.form.length - 2].x && snake.form[snake.form.length - 1].x != 32)) {
+      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].x <= snake.form[snake.form.length - 2].x &&
+        (snake.form[snake.form.length - 1].x != 64 || snake.form[snake.form.length - 2].x != 512))) {
         keyOfKeyboard = "left";
       }
       break;
     case 38:
     case 87:
-      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].y <= snake.form[snake.form.length - 2].y && snake.form[snake.form.length - 1].y != 128)) {
+      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].y <= snake.form[snake.form.length - 2].y &&
+        (snake.form[snake.form.length - 1].y != 160 || snake.form[snake.form.length - 2].y != 544))) {
         keyOfKeyboard = "up";
       }
       break;
     case 39:
     case 68:
-      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].x >= snake.form[snake.form.length - 2].x && snake.form[snake.form.length - 1].x != 544)) {
+      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].x >= snake.form[snake.form.length - 2].x &&
+        (snake.form[snake.form.length - 1].x != 512 || snake.form[snake.form.length - 2].x != 64))) {
         keyOfKeyboard = "right";
       }
       break;
     case 40:
     case 83:
-      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].y >= snake.form[snake.form.length - 2].y && snake.form[snake.form.length - 1].y != 576)) {
+      if (snake.form.length == 1 || (snake.form[snake.form.length - 1].y >= snake.form[snake.form.length - 2].y &&
+        (snake.form[snake.form.length - 1].y != 544 || snake.form[snake.form.length - 2].y != 160))) {
         keyOfKeyboard = "down";
       }
       break;
