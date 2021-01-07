@@ -1,0 +1,18 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG Editor - http://github.com/mzalive/SVG Editor/ -->
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_2_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="502" width="502" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect filter="url(#svg_2_blur)" id="svg_2" height="50" width="355" y="234" x="72.5" stroke-width="1.5" stroke="#c9c9c9" fill="#dfdfdf"/>
+  <rect filter="url(#svg_2_blur)" id="svg_4" height="50" width="355" y="88" x="72.5" stroke-width="1.5" stroke="#c9c9c9" fill="#dfdfdf"/>
+  <rect filter="url(#svg_2_blur)" id="svg_5" height="50" width="355" y="380" x="71.5" stroke-width="1.5" stroke="#c9c9c9" fill="#dfdfdf"/>
+ </g>
+</svg>
