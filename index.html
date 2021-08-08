@@ -15,15 +15,26 @@
 
 <body>
     <header class="header d-flex justify-content-center">
-        <nav class="menu d-flex flex-row align-items-center justify-content-between container row">
-            <a class="menu__logo menu__link col-5" href="#">
-                <img src="../amongloneliness.github.io/files/icons/header/menuLogo.png" height="100%" alt="png format logo of menu">
+        <nav class="menu d-flex flex-row align-items-center justify-content-between container">
+            <a class="menu__logo" href="#">
+                <img class="menu__link" src="../amongloneliness.github.io/files/icons/header/menuLogo.png" height="100%" alt="png format logo of menu">
             </a>
-            <a class="menu__link col-1" href="#">Главная</a>
-            <a class="menu__link col-1" href="#">Проекты</a>
-            <a class="menu__link col-1" href="#">Обо Мне</a>
-            <a class="menu__link col-3" href="#">Контакты</a>
-            <div class="menu__mobileButton d-flex justify-content-end align-items-center col">
+            <ul class="menuLinks d-sm-flex flex-row justify-content-between d-none">
+                <li>
+                    <a class="menuLinks__link menuLinks__link--active" href="https://vugarkerimov.ru">Главная</a>
+                </li>
+                <li>
+                    <a class="menuLinks__link" href="#">Проекты</a>
+                </li>
+                <li>
+                    <a class="menuLinks__link" href="#">Обо Мне</a>
+                </li>
+                <li>
+                    <a class="menuLinks__link" href="#">Контакты</a>
+                </li>
+            </ul>
+            <div class="menuMobileButton d-flex justify-content-end align-items-center">
+                <input class="menuMobileButton__checkbox" type="checkbox">
                 <span></span>
             </div>
         </nav>

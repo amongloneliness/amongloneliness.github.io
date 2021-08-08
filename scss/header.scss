@@ -1,45 +1,165 @@
+$colorBlack: #111;
+$heightMenu: 50px;
+$widthMobileButton: $heightMenu / 2;
+$heightMobileButtonLines: 2px;
+$heightUnderline: 2px;
+$mediaDesktopXXL: 1400px;
+$mediaDesktopXL: 1200px;
+$mediaDesktopLG: 992px;
+$mediaDesktopMD: 768px;
+$mediaDesktopSM: 576px;
+@mixin standartTransitionEase {
+    transition: .3s ease;
+}
+
+@mixin transform($property) {
+    transform: $property;
+    -ms-transform: $property;
+    -moz-transform: $property;
+}
+
 .header {
     .menu {
-        height: 50px;
+        height: $heightMenu;
         padding-top: 1%;
         &__logo {
+            width: fit-content;
             height: 75%;
         }
-        &__link {
-            cursor: pointer;
-            text-decoration: none;
-            text-transform: uppercase;
-            color: #dfdfdf;
-            opacity: .8;
-            transition: .25s 0s;
-            white-space: nowrap;
-            &:hover {
+        &Links {
+            list-style: none;
+            margin: 0;
+            &__link {
+                position: relative;
+                font-size: .7em;
+                font-family: Jost-Medium;
+                cursor: pointer;
                 text-decoration: none;
-                color: #fff;
-                opacity: unset;
-                transition: .25s 0s;
+                text-transform: uppercase;
+                color: $colorBlack;
+                opacity: .7;
+                @include standartTransitionEase();
+                white-space: nowrap;
+                &:hover,
+                &--active {
+                    text-decoration: none;
+                    opacity: unset;
+                    transition: .3s ease;
+                    &::after {
+                        width: 80%;
+                        @include standartTransitionEase();
+                    }
+                }
+                &--active {
+                    pointer-events: none;
+                }
+                &:after {
+                    position: absolute;
+                    left: 10%;
+                    display: block;
+                    content: '';
+                    opacity: .7;
+                    width: 0;
+                    height: $heightUnderline;
+                    background-color: $colorBlack;
+                    @include standartTransitionEase();
+                }
+                &--active:after {
+                    width: 80%;
+                }
             }
         }
-        &__mobileButton {
+        &MobileButton {
             position: relative;
             padding: 2% 0;
-            width: 26px;
+            width: $widthMobileButton;
+            &__checkbox {
+                margin: 0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1;
+                opacity: 0;
+            }
+            &__checkbox:checked~span {
+                @include transform(rotate(-45deg));
+                @include standartTransitionEase();
+            }
+            &__checkbox:checked~span:after {
+                @include transform(rotate(90deg));
+                top: 0;
+                @include standartTransitionEase();
+            }
+            &__checkbox:checked~span:before {
+                opacity: 0;
+                @include standartTransitionEase();
+            }
             span,
             span:after,
             span::before {
                 display: block;
                 position: absolute;
                 width: inherit;
-                height: 2px;
-                background-color: white;
+                height: $heightMobileButtonLines;
+                background-color: $colorBlack;
+                @include standartTransitionEase();
             }
             span:after {
                 content: '';
-                top: -8px;
+                top: $heightMobileButtonLines * 3;
+                @include standartTransitionEase();
             }
             span:before {
                 content: '';
-                top: +8px;
+                top: $heightMobileButtonLines * -3;
+                @include standartTransitionEase();
+            }
+        }
+    }
+}
+
+@media (min-width: $mediaDesktopSM) {
+    .header {
+        .menu {
+            &Links {
+                width: 55%;
+            }
+        }
+    }
+}
+
+@media (min-width: $mediaDesktopMD) {
+    .header {
+        .menu {
+            &Links {
+                width: 45%;
+                &__link {
+                    font-size: .9em;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $mediaDesktopLG) {
+    .header {
+        .menu {
+            &Links {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (min-width: $mediaDesktopXL) {
+    .header {
+        .menu {
+            &Links {
+                width: 30%;
             }
         }
     }
