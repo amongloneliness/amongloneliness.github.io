@@ -118,5 +118,12 @@
 @media (min-width: 1200px) {
   .header .menuLinks {
     width: 30%; } }
+.main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(#5ca2b4, #6176a0); }
 
 /*# sourceMappingURL=style.css.map */
