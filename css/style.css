@@ -1,38 +1,67 @@
 .header .menu {
-  height: 50px;
-  padding-top: 1%; }
-  .header .menu__logo {
-    height: 75%; }
-  .header .menu__link {
+    height: 50px;
+    padding-top: 1%;
+}
+
+.header .menu__logo {
+    height: 75%;
+}
+
+.header .menu__link {
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
     color: #dfdfdf;
     opacity: .8;
     transition: .25s 0s;
-    white-space: nowrap; }
-    .header .menu__link:hover {
-      text-decoration: none;
-      color: #fff;
-      opacity: unset;
-      transition: .25s 0s; }
-  .header .menu__mobileButton {
+    white-space: nowrap;
+}
+
+.header .menu__link:hover {
+    text-decoration: none;
+    color: #fff;
+    opacity: unset;
+    transition: .25s 0s;
+}
+
+.header .menu__mobileButton {
     position: relative;
     padding: 2% 0;
-    width: 26px; }
-    .header .menu__mobileButton span,
-    .header .menu__mobileButton span:after,
-    .header .menu__mobileButton span::before {
-      display: block;
-      position: absolute;
-      width: inherit;
-      height: 2px;
-      background-color: white; }
-    .header .menu__mobileButton span:after {
-      content: '';
-      top: -8px; }
-    .header .menu__mobileButton span:before {
-      content: '';
-      top: +8px; }
+    width: 26px;
+}
 
-/*# sourceMappingURL=style.css.map */
+.header .menu__mobileButton span,
+.header .menu__mobileButton span:after,
+.header .menu__mobileButton span::before {
+    display: block;
+    position: absolute;
+    width: inherit;
+    height: 2px;
+    background-color: white;
+}
+
+.header .menu__mobileButton span:after {
+    content: '';
+    top: -8px;
+}
+
+.header .menu__mobileButton span:before {
+    content: '';
+    top: +8px;
+}
+
+@font-face {
+    font-family: Jost-Medium;
+    src: url(../files/fonts/Jost-Medium.ttf);
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}
+
+@font-face {
+    font-family: Jost-ExtraLight;
+    src: url(../files/fonts/Jost-ExtraLight.ttf);
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}
