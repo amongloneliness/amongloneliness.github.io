@@ -1,0 +1,48 @@
+@mixin parallaxLayer ($urlImage) {
+    display: block;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url($urlImage);
+    transition: 1s ease;
+}
+
+.main {
+    height: 100%;
+    background: linear-gradient(#5ca2b4, #6176a0);
+    .intro {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        &__prlxFirst {
+            @include parallaxLayer("../files/images/main/prlxFirst.png");
+            z-index: 5;
+            bottom: -27vw;
+            width: 130%;
+            height: 75vw;
+        }
+        &__prlxSecond {
+            @include parallaxLayer("../files/images/main/prlxSecond.png");
+            width: 70%;
+            height: 46vw;
+            bottom: 0;
+            z-index: 4;
+        }
+        &__prlxThird {
+            @include parallaxLayer("../files/images/main/prlxThird.png");
+            bottom: -45vw;
+            width: 110%;
+            height: 76vw;
+            z-index: 3;
+        }
+        &__prlxFourth {
+            @include parallaxLayer("../files/images/main/prlxFourth.png");
+            background-size: cover;
+            opacity: .5;
+            z-index: 2;
+            width: 120%;
+            height: 100%;
+        }
+    }
+}
