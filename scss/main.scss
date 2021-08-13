@@ -8,12 +8,12 @@ $preloaderWidthHeight: 75px;
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(#b4ccd2, #798582);
+    background: linear-gradient(#ffffff, #ffffff);
     &__circle {
         width: $preloaderWidthHeight + $preloaderWidthHeight / 3;
         height: $preloaderWidthHeight + $preloaderWidthHeight / 3;
         border-radius: 50%;
-        box-shadow: 2px 2px 2px rgba(190, 242, 218, 0.789);
+        box-shadow: 2px 2px 2px rgba(2, 9, 17, 0.789);
         animation: preloader .5s infinite linear;
     }
     &__gif {
