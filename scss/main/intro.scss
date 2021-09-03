@@ -8,7 +8,6 @@
 }
 
 .main {
-    height: 100%;
     .intro {
         background: linear-gradient(#fdfdfd, #ffffff);
         height: 100vh;
@@ -18,28 +17,30 @@
         &__prlxFirst {
             @include parallaxLayer("../files/images/main/prlxFirst.png");
             z-index: 5;
-            bottom: -40vw;
+            bottom: -43vw;
             width: 130%;
             height: 75vw;
         }
         &__prlxSecond {
             @include parallaxLayer("../files/images/main/prlxSecond.png");
             width: 70%;
-            height: 39vw;
+            height: 38vw;
             bottom: 0;
             z-index: 4;
+            opacity: 0;
         }
         &__prlxThird {
             @include parallaxLayer("../files/images/main/prlxThird.png");
-            bottom: -45vw;
+            bottom: -52vw;
             width: 100%;
             height: 76vw;
             z-index: 3;
+            opacity: 0;
         }
         &__prlxFourth {
             @include parallaxLayer("../files/images/main/prlxFourth.png");
             background-size: cover;
-            opacity: 0;
+            opacity: .2;
             z-index: 2;
             width: 100%;
             height: 100%;
@@ -48,7 +49,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 15vw;
+            font-size: 14vw;
             font-family: Geneva, Tahoma, sans-serif;
             color: $colorBlack;
             opacity: .89;
@@ -58,6 +59,29 @@
             left: 0;
             right: 0;
             z-index: 2;
+            transition: 1s ease;
+        }
+        .loaded {
+            opacity: unset;
+        }
+    }
+}
+
+@media screen and (orientation:portrait) {
+    .main {
+        .intro {
+            &__prlxFirst {
+                bottom: -39vw;
+            }
+            &__prlxSecond {
+                width: 150%;
+                bottom: 0;
+                height: 80vw;
+            }
+            &__prlxThird {
+                bottom: 0vw;
+                height: 60vw;
+            }
         }
     }
 }

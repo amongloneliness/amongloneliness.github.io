@@ -16,7 +16,7 @@
 <body>
     <header class="header d-flex justify-content-center">
         <nav class="menu d-flex flex-row align-items-center justify-content-between container">
-            <a class="menu__logo" href="#">
+            <a class="menu__logo animationItem" href="#">
                 <img class="menu__link" src="../amongloneliness.github.io/files/icons/header/menuLogo.png" height="100%" alt="png format logo of menu">
             </a>
             <ul class="menuLinks d-sm-flex flex-row justify-content-between d-none">
@@ -24,13 +24,13 @@
                     <a class="menuLinks__link menuLinks__link--active" href="https://vugarkerimov.ru">Главная</a>
                 </li>
                 <li>
-                    <a class="menuLinks__link" href="#">Проекты</a>
+                    <a class="menuLinks__link animationItem" href="#">Проекты</a>
                 </li>
                 <li>
-                    <a class="menuLinks__link" href="#">Обо Мне</a>
+                    <a class="menuLinks__link animationItem" href="#">Обо Мне</a>
                 </li>
                 <li>
-                    <a class="menuLinks__link" href="#">Контакты</a>
+                    <a class="menuLinks__link animationItem" href="#">Контакты</a>
                 </li>
             </ul>
             <div class="menuMobileButton d-flex justify-content-end align-items-center">
@@ -39,7 +39,7 @@
             </div>
         </nav>
     </header>
-    <main class="main d-flex justify-content-center">
+    <main class="main d-flex justify-content-center flex-column">
         <div class="preloader d-flex justify-content-center align-items-center">
             <div class="preloader__circle d-flex justify-content-center align-items-center">
                 <img class="preloader__gif" src="../amongloneliness.github.io/files/gifs/preloader.gif" alt="running vugar">
@@ -47,14 +47,17 @@
         </div>
         <div class="intro d-flex align-items-end justify-content-center">
             <div class="intro__prlxItem intro__prlxFirst"></div>
-            <div class="intro__prlxItem intro__prlxSecond"></div>
-            <div class="intro__prlxItem intro__prlxThird"></div>
+            <div class="intro__prlxItem intro__prlxSecond animationItem"></div>
+            <div class="intro__prlxItem intro__prlxThird animationItem"></div>
             <div class="intro__prlxItem intro__prlxFourth"></div>
             <div class="intro__prlxItem intro__prlxFifth">Welcome</div>
         </div>
     </main>
 </body>
+<script src="../amongloneliness.github.io/js/main/animationHeader.js"></script>
+<script src="../amongloneliness.github.io/js/main/animationObjects.js"></script>
 <script src="../amongloneliness.github.io/js/main/parallaxIntro.js"></script>
 <script src="../amongloneliness.github.io/js/preloader.js"></script>
+<script src="../amongloneliness.github.io/js/init.js"></script>
 
 </html>

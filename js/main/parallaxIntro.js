@@ -14,6 +14,11 @@ const scrollHandle = () => {
             case 2:
                 prlxItems[i].style.transform = `translate3d(0, ${scrollY * 0.1}px, 0)  scale(${1 + scrollY*0.0001}, ${1 + scrollY*0.0001})`;
                 break;
+            case 3:
+                break;
+            case 4:
+                prlxItems[i].style.transform = `translate3d(0, ${scrollY * 0.05}px, 0)`;
+                break;
         }
     }
 };

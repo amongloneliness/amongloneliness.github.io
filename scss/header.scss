@@ -42,7 +42,7 @@ $mediaDesktopSM: 576px;
                 text-decoration: none;
                 text-transform: uppercase;
                 color: $colorBlack;
-                opacity: .7;
+                opacity: 0;
                 @include standartTransitionEase();
                 white-space: nowrap;
                 &:hover,
@@ -71,6 +71,13 @@ $mediaDesktopSM: 576px;
                 }
                 &--active:after {
                     width: 80%;
+                }
+            }
+            .loaded {
+                transition: .5s ease;
+                opacity: .7;
+                &:hover {
+                    opacity: unset;
                 }
             }
         }

@@ -1,4 +1,4 @@
-window.onload = function() {
+preloader = () => {
     window.setTimeout(function() {
         document.querySelector('.preloader').classList.add('preloader--loaded');
     }, 4000);
