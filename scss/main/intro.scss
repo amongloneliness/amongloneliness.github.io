@@ -24,8 +24,7 @@
         &__prlxSecond {
             @include parallaxLayer("https://vugarkerimov.ru/files/images/main/prlxSecond.png");
             width: 70%;
-            height: 38vw;
-            bottom: 0;
+            bottom: 38vw;
             z-index: 4;
             opacity: 0;
         }
@@ -46,7 +45,6 @@
             height: 100%;
         }
         &__prlxFifth {
-            display: flex;
             justify-content: center;
             align-items: center;
             font-size: 14vw;
@@ -67,20 +65,23 @@
     }
 }
 
-@media screen and (orientation:portrait) {
+@media (min-width: $mediaDesktopSM) {
     .main {
         .intro {
             &__prlxFirst {
-                bottom: -30vw;
+                bottom: -43vw;
+                width: 130%;
+                height: 75vw;
             }
             &__prlxSecond {
-                width: 150%;
+                width: 70%;
+                height: 38vw;
                 bottom: 0;
-                height: 70vw;
             }
             &__prlxThird {
-                bottom: 0vw;
-                height: 55vw;
+                bottom: -52vw;
+                width: 100%;
+                height: 76vw;
             }
         }
     }

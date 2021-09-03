@@ -152,8 +152,7 @@ body {
     background-image: url("https://vugarkerimov.ru/files/images/main/prlxSecond.png");
     transition: 1s ease;
     width: 70%;
-    height: 38vw;
-    bottom: 0;
+    bottom: 38vw;
     z-index: 4;
     opacity: 0; }
   .main .intro__prlxThird {
@@ -181,7 +180,6 @@ body {
     width: 100%;
     height: 100%; }
   .main .intro__prlxFifth {
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 14vw;
@@ -198,16 +196,19 @@ body {
   .main .intro .loaded {
     opacity: unset; }
 
-@media screen and (orientation: portrait) {
+@media (min-width: 576px) {
   .main .intro__prlxFirst {
-    bottom: -30vw; }
+    bottom: -43vw;
+    width: 130%;
+    height: 75vw; }
   .main .intro__prlxSecond {
-    width: 150%;
-    bottom: 0;
-    height: 70vw; }
+    width: 70%;
+    height: 38vw;
+    bottom: 0; }
   .main .intro__prlxThird {
-    bottom: 0vw;
-    height: 55vw; } }
+    bottom: -52vw;
+    width: 100%;
+    height: 76vw; } }
 .preloader {
   transition: 1s ease;
   z-index: 9999;
