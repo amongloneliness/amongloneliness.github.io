@@ -200,14 +200,14 @@ body {
 
 @media screen and (orientation: portrait) {
   .main .intro__prlxFirst {
-    bottom: -39vw; }
+    bottom: -30vw; }
   .main .intro__prlxSecond {
     width: 150%;
     bottom: 0;
-    height: 80vw; }
+    height: 70vw; }
   .main .intro__prlxThird {
     bottom: 0vw;
-    height: 60vw; } }
+    height: 55vw; } }
 .preloader {
   transition: 1s ease;
   z-index: 9999;
