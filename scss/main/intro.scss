@@ -15,14 +15,14 @@
         position: relative;
         overflow: hidden;
         &__prlxFirst {
-            @include parallaxLayer("../files/images/main/prlxFirst.png");
+            @include parallaxLayer("https://vugarkerimov.ru/files/images/main/prlxFirst.png");
             z-index: 5;
             bottom: -43vw;
             width: 130%;
             height: 75vw;
         }
         &__prlxSecond {
-            @include parallaxLayer("../files/images/main/prlxSecond.png");
+            @include parallaxLayer("https://vugarkerimov.ru/files/images/main/prlxSecond.png");
             width: 70%;
             height: 38vw;
             bottom: 0;
@@ -30,7 +30,7 @@
             opacity: 0;
         }
         &__prlxThird {
-            @include parallaxLayer("../files/images/main/prlxThird.png");
+            @include parallaxLayer("https://vugarkerimov.ru/files/images/main/prlxThird.png");
             bottom: -52vw;
             width: 100%;
             height: 76vw;
@@ -38,9 +38,9 @@
             opacity: 0;
         }
         &__prlxFourth {
-            @include parallaxLayer("../files/images/main/prlxFourth.png");
+            @include parallaxLayer("https://vugarkerimov.ru/files/images/main/prlxFourth.png");
             background-size: cover;
-            opacity: .2;
+            opacity: .1;
             z-index: 2;
             width: 100%;
             height: 100%;
