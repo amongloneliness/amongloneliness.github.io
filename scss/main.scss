@@ -1,5 +1,5 @@
 @import 'main/intro';
-$preloaderWidthHeight: 75px;
+@import 'main/about';
 .preloader {
     transition: 1s ease;
     z-index: 9999;

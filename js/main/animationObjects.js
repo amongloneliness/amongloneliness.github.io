@@ -1,23 +1,26 @@
-var isScrolling = false;
+window.addEventListener("scroll", nowScrolling);
 
-window.addEventListener("scroll", throttleScroll, false);
+// all elements with animation
+var hiddenElements = document.querySelectorAll('.animationItem');
 
-function throttleScroll(e) {
-    if (isScrolling == false) {
-        window.requestAnimationFrame(function() {
-            scrolling(e);
-            isScrolling = false;
-        });
+function nowScrolling() {
+    for (let i = 0; i < hiddenElements.length; i++) {
+        scrolling(hiddenElements[i]);
     }
-    isScrolling = true;
 }
 
-function scrolling(e) {
-
+function scrolling(element) {
+    window.requestAnimationFrame(function() {
+        if (isPartiallyVisible(element)) {
+            element.classList.remove('invisible');
+        } else {
+            element.classList.add('invisible');
+        }
+    });
 }
 
-function isPartiallyVisible(el) {
-    var elementBoundary = el.getBoundingClientRect();
+function isPartiallyVisible(element) {
+    var elementBoundary = element.getBoundingClientRect();
 
     var top = elementBoundary.top;
     var bottom = elementBoundary.bottom;
@@ -26,8 +29,8 @@ function isPartiallyVisible(el) {
     return ((top + height >= 0) && (height + window.innerHeight >= bottom));
 }
 
-function isFullyVisible(el) {
-    var elementBoundary = el.getBoundingClientRect();
+function isFullyVisible(element) {
+    var elementBoundary = element.getBoundingClientRect();
 
     var top = elementBoundary.top;
     var bottom = elementBoundary.bottom;

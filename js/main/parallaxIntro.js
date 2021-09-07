@@ -1,3 +1,5 @@
+'use strict'
+
 let prlxItems = document.querySelectorAll('.intro__prlxItem');
 
 const scrollHandle = () => {

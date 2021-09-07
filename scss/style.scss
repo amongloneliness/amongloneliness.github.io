@@ -1,8 +1,9 @@
 body {
     margin: 0;
-    height: 3000px;
 }
 
 @import 'fonts';
+@import 'mixins';
+@import 'variables';
 @import 'header';
 @import 'main';

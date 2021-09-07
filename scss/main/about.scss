@@ -1,0 +1,70 @@
+.about {
+    padding: 5vw 0;
+    width: 100%;
+    background-color: $colorBlack;
+    @include standartTransitionEase;
+    &__title {
+        font-size: 4em;
+        font-family: Geneva, Tahoma, sans-serif;
+        color: white;
+        opacity: .9;
+        text-align: center;
+        @include longTransition;
+    }
+    &__text {
+        font-size: 0.8em;
+        color: white;
+        font-family: Jost-ExtraLight;
+        opacity: .8;
+        line-height: 1.5;
+        @include standartTransitionEase;
+        p {
+            @include longTransition;
+        }
+    }
+    &__link {
+        @include standartTransitionEase;
+        font-size: 0.8em;
+        color: white;
+        opacity: .8;
+        font-family: Jost-ExtraLight;
+        line-height: 1.5;
+        cursor: pointer;
+        &:hover {
+            color: rgb(196, 196, 196);
+        }
+    }
+    .container {
+        width: 90%;
+        padding: 0 5%;
+    }
+    .invisible {
+        opacity: 0;
+    }
+}
+
+@media (min-width: $mediaDesktopSM) {
+    .about {
+        &__title {
+            font-size: 5em;
+        }
+        &__text {
+            font-size: 1.1em;
+        }
+        &__link {
+            font-size: 1em;
+        }
+        .container {
+            width: auto;
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: $mediaDesktopLG) {
+    .about {
+        &__title {
+            font-size: 8em;
+        }
+    }
+}

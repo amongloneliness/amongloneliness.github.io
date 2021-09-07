@@ -1,6 +1,5 @@
 body {
-  margin: 0;
-  height: 3000px; }
+  margin: 0; }
 
 @font-face {
   font-family: Jost-Medium;
@@ -21,11 +20,15 @@ body {
   right: 0;
   z-index: 100; }
   .header .menu {
+    transition: .3s ease;
     height: 50px;
     padding-top: 1%; }
     .header .menu__logo {
+      transition: .3s ease;
       width: fit-content;
       height: 75%; }
+      .header .menu__logo:hover {
+        opacity: .8; }
     .header .menuLinks {
       list-style: none;
       margin: 0; }
@@ -127,13 +130,13 @@ body {
 @media (min-width: 1200px) {
   .header .menuLinks {
     width: 30%; } }
-.main .intro {
+.intro {
   background: linear-gradient(#fdfdfd, #ffffff);
   height: 100vh;
   width: 100%;
   position: relative;
   overflow: hidden; }
-  .main .intro__prlxFirst {
+  .intro__prlxFirst {
     display: block;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -144,7 +147,7 @@ body {
     bottom: -23vw;
     width: 130%;
     height: 75vw; }
-  .main .intro__prlxSecond {
+  .intro__prlxSecond {
     display: block;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -156,7 +159,7 @@ body {
     bottom: 0;
     z-index: 4;
     opacity: 0; }
-  .main .intro__prlxThird {
+  .intro__prlxThird {
     display: block;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -166,9 +169,8 @@ body {
     bottom: 5vw;
     width: 100%;
     height: 76vw;
-    z-index: 3;
-    opacity: 0; }
-  .main .intro__prlxFourth {
+    z-index: 3; }
+  .intro__prlxFourth {
     display: block;
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -176,15 +178,15 @@ body {
     background-image: url("https://vugarkerimov.ru/files/images/main/prlxFourth.png");
     transition: 1s ease;
     background-size: cover;
-    opacity: .4;
+    opacity: .2;
     z-index: 2;
     width: 100%;
     height: 100%; }
-  .main .intro__prlxFifth {
+  .intro__prlxFifth {
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14vw;
-    font-family: Geneva, Tahoma, sans-serif;
+    font-family: cursive;
     color: #111;
     opacity: .89;
     position: absolute;
@@ -194,24 +196,76 @@ body {
     right: 0;
     z-index: 2;
     transition: 1s ease; }
-  .main .intro .loaded {
+  .intro .loaded {
     opacity: unset; }
 
 @media (min-width: 576px) {
-  .main .intro__prlxFirst {
+  .intro__prlxFirst {
     bottom: -43vw;
     width: 130%;
     height: 75vw; }
-  .main .intro__prlxSecond {
+  .intro__prlxSecond {
     width: 70%;
     height: 38vw;
     bottom: 0; }
-  .main .intro__prlxThird {
+  .intro__prlxThird {
     bottom: -52vw;
     width: 100%;
     height: 76vw; }
-  .main .intro__prlxFourth {
-    opacity: .1; } }
+  .intro__prlxFourth {
+    opacity: .1; }
+  .intro__prlxFifth {
+    font-size: 13vw; } }
+.about {
+  padding: 5vw 0;
+  width: 100%;
+  background-color: #111;
+  transition: .3s ease; }
+  .about__title {
+    font-size: 4em;
+    font-family: Geneva, Tahoma, sans-serif;
+    color: white;
+    opacity: .9;
+    text-align: center;
+    transition: 1.5s; }
+  .about__text {
+    font-size: 0.8em;
+    color: white;
+    font-family: Jost-ExtraLight;
+    opacity: .8;
+    line-height: 1.5;
+    transition: .3s ease; }
+    .about__text p {
+      transition: 1.5s; }
+  .about__link {
+    transition: .3s ease;
+    font-size: 0.8em;
+    color: white;
+    opacity: .8;
+    font-family: Jost-ExtraLight;
+    line-height: 1.5;
+    cursor: pointer; }
+    .about__link:hover {
+      color: #c4c4c4; }
+  .about .container {
+    width: 90%;
+    padding: 0 5%; }
+  .about .invisible {
+    opacity: 0; }
+
+@media (min-width: 576px) {
+  .about__title {
+    font-size: 5em; }
+  .about__text {
+    font-size: 1.1em; }
+  .about__link {
+    font-size: 1em; }
+  .about .container {
+    width: auto;
+    padding: 0; } }
+@media (min-width: 992px) {
+  .about__title {
+    font-size: 8em; } }
 .preloader {
   transition: 1s ease;
   z-index: 9999;
@@ -222,14 +276,14 @@ body {
   right: 0;
   background: linear-gradient(#ffffff, #ffffff); }
   .preloader__circle {
-    width: 100px;
-    height: 100px;
+    width: 66.6666666667px;
+    height: 66.6666666667px;
     border-radius: 50%;
     box-shadow: 2px 2px 2px rgba(2, 9, 17, 0.789);
     animation: preloader .5s infinite linear; }
   .preloader__gif {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     image-rendering: pixelated;
     animation: preloader .5s infinite linear reverse;
     opacity: 0; }
