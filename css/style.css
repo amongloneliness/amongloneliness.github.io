@@ -186,7 +186,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: cursive;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #111;
     opacity: .89;
     position: absolute;
