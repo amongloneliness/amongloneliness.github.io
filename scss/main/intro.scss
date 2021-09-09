@@ -47,8 +47,14 @@
         right: 0;
         z-index: 1;
         transition: 1s ease;
-        font-size: 0;
         background: linear-gradient(rgba(177, 230, 255, 0.933), rgb(185, 253, 255));
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        .intro__titleDesktop {
+            font-size: 0;
+        }
+        .intro__titleMobile {
+            font-size: 4vw;
+        }
     }
     .loaded {
         opacity: unset;
@@ -76,9 +82,13 @@
             opacity: .1;
         }
         &__prlxFifth {
-            font-size: 13vw;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
             background: none;
+            .intro__titleDesktop {
+                font-size: 13vw;
+            }
+            .intro__titleMobile {
+                font-size: 0;
+            }
         }
     }
 }

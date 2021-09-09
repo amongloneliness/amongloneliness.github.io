@@ -195,8 +195,12 @@ body {
     right: 0;
     z-index: 1;
     transition: 1s ease;
-    font-size: 0;
-    background: linear-gradient(rgba(177, 230, 255, 0.933), #b9fdff); }
+    background: linear-gradient(rgba(177, 230, 255, 0.933), #b9fdff);
+    font-family: Verdana, Geneva, Tahoma, sans-serif; }
+    .intro__prlxFifth .intro__titleDesktop {
+      font-size: 0; }
+    .intro__prlxFifth .intro__titleMobile {
+      font-size: 4vw; }
   .intro .loaded {
     opacity: unset; }
 
@@ -216,9 +220,11 @@ body {
   .intro__prlxFourth {
     opacity: .1; }
   .intro__prlxFifth {
-    font-size: 13vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: none; } }
+    background: none; }
+    .intro__prlxFifth .intro__titleDesktop {
+      font-size: 13vw; }
+    .intro__prlxFifth .intro__titleMobile {
+      font-size: 0; } }
 .about {
   padding: 5vw 0;
   width: 100%;
