@@ -4,6 +4,10 @@
   font-style: normal;
   font-weight: 400;
   font-display: block; }
+a {
+  text-decoration: none;
+  color: black; }
+
 body {
   display: flex;
   justify-content: center;
@@ -11,14 +15,33 @@ body {
   width: auto;
   height: 100vh; }
   body .mainPage {
+    position: relative;
+    font-family: Lato-Black Arial;
     display: inherit;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    font-size: 16px;
     width: 30%;
-    background-color: #f7ffd4; }
+    background-color: #60ffba; }
     body .mainPage__title {
-      font-family: Lato-Black Arial;
+      font-family: inherit;
       font-size: 36px;
       width: min-content; }
+    body .mainPage__description {
+      font-family: inherit;
+      font-size: 24px; }
+    body .mainPage__alternativeLink {
+      margin: 2%;
+      font-size: 16px;
+      font-family: inherit; }
+    body .mainPage__button {
+      width: 90%;
+      height: 5%; }
+    body .mainPage__logo {
+      position: relative;
+      width: 50%;
+      height: 50%; }
 
 /*# sourceMappingURL=style.css.map */
