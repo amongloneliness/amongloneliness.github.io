@@ -1,0 +1,24 @@
+@font-face {
+  font-family: Lato-Black;
+  src: url("../files/fonts/Lato-Black.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block; }
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: auto;
+  height: 100vh; }
+  body .mainPage {
+    display: inherit;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    background-color: #f7ffd4; }
+    body .mainPage__title {
+      font-family: Lato-Black Arial;
+      font-size: 36px;
+      width: min-content; }
+
+/*# sourceMappingURL=style.css.map */
