@@ -17,7 +17,9 @@ main {
   width: 60%;
   max-width: 374px;
   margin: auto;
-  padding-bottom: 30%; }
+  padding-bottom: 30%;
+  pointer-events: none;
+  z-index: -5; }
 
 .regInputPanel {
   display: flex;
@@ -53,7 +55,9 @@ main {
     text-decoration: none;
     color: #E61E28;
     cursor: pointer;
-    transition: all .2s ease; }
+    transition: all .2s ease;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent; }
     .regButtonEnterWrapper:hover {
       border: 1px solid black;
       color: black; }
@@ -62,7 +66,9 @@ main {
   color: #898B8D;
   font-family: 'Graphik', Arial, Helvetica, sans-serif;
   font-size: 1em;
-  text-decoration: underline; }
+  text-decoration: underline;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent; }
   .regButtonRegisterWrapper {
     margin: 10% auto auto auto; }
 
