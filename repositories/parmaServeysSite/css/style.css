@@ -19,6 +19,7 @@ main {
   margin: auto;
   padding-bottom: 30%;
   pointer-events: none;
+  outline: none;
   z-index: -5; }
 
 .regInputPanel {
@@ -57,7 +58,8 @@ main {
     cursor: pointer;
     transition: all .2s ease;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-    -webkit-tap-highlight-color: transparent; }
+    -webkit-tap-highlight-color: transparent;
+    outline: none; }
     .regButtonEnterWrapper:hover {
       border: 1px solid black;
       color: black; }
@@ -68,7 +70,8 @@ main {
   font-size: 1em;
   text-decoration: underline;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  outline: none; }
   .regButtonRegisterWrapper {
     margin: 10% auto auto auto; }
 
