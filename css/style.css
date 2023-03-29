@@ -85,7 +85,7 @@ body {
       background-position: center center;
       transition: 0.75s cubic-bezier(0.075, 0.05, 0, 1); }
     .main .layers__base {
-      padding: calc(min(10vw, 10vh));
+      padding: calc(max(13vw, 13vh));
       transform: translate3d(calc(var(--mouseX) / 16), calc(var(--scrollTop) / 2 + var(--mouseY) / 16), 0); }
     .main .layers__middle {
       transform: translate3d(calc(var(--mouseX) / 24), calc(var(--scrollTop) / 2.5 + var(--mouseY) / 24), 0); }
