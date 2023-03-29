@@ -93,6 +93,7 @@ body {
       padding-top: 60%;
       transform: translate3d(calc(var(--mouseX) / 22), calc(var(--scrollTop) / 5 + var(--mouseY) / 22), 0); }
 
+/* ------ для адаптива ------ */
 .header {
   display: flex;
   flex-direction: row;
@@ -132,5 +133,20 @@ body {
     justify-content: space-between;
     padding: 5vh 10vw;
     width: 80vw; }
+
+/* ----- для мобильных устройств --- */
+@media screen and (max-width: 500px) {
+  .header {
+    min-height: 10vh;
+    /* ------ logo ------ */
+    /* ------ button ------ */ }
+    .header__img {
+      height: calc(min(10vh, 10vw)); }
+    .header__menuButton {
+      height: calc(min(10vh, 10vw));
+      /* ------ button lines ------ */ }
+      .header__menuButton > span {
+        height: calc(min(10vh, 10vw) / 15);
+        width: calc(min(10vh, 10vw) / 4 * 3); } }
 
 /*# sourceMappingURL=style.css.map */
