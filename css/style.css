@@ -115,7 +115,7 @@ body {
     align-items: center;
     /* ------ button lines ------ */ }
     .header__menuButton > span {
-      margin-top: 25%;
+      margin-top: 35%;
       display: block;
       height: calc(min(5vh, 5vw) / 15);
       width: calc(min(5vh, 5vw) / 4 * 3);
@@ -128,7 +128,7 @@ body {
         width: inherit;
         background-color: white; }
       .header__menuButton > span::before {
-        top: 27%; }
+        top: 35%; }
   .headerWrapper {
     display: inherit;
     justify-content: space-between;
