@@ -136,7 +136,7 @@ body {
     width: 80vw; }
 
 /* ----- для мобильных устройств --- */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 500px), (max-height: 500px) {
   .header {
     min-height: 10vh;
     /* ------ logo ------ */

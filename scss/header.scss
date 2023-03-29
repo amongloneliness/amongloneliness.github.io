@@ -58,8 +58,6 @@ $minWidth: 5vw;
         }
     }
 
-    
-
     &Wrapper
     {
         display: inherit;
@@ -70,7 +68,7 @@ $minWidth: 5vw;
 }
 
 /* ----- для мобильных устройств --- */
-@media screen and (max-width: 500px) 
+@media screen and (max-width: 500px), (max-height: 500px)
 {
     $minHeight: 10vh;
     $minWidth: 10vw;
