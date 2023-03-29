@@ -35,6 +35,7 @@ $minWidth: 5vw;
         /* ------ button lines ------ */
         & > span
         {
+            margin-top: 25%;
             display: block;
             height: calc(min(#{$minHeight}, #{$minWidth}) / 15);
             width: calc(min(#{$minHeight}, #{$minWidth}) / 4 * 3);
@@ -52,7 +53,7 @@ $minWidth: 5vw;
 
             &::before
             {
-                top: 25%;
+                top: 27%;
             }
         }
     }
