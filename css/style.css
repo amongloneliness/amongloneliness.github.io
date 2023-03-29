@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0; }
 
@@ -13,293 +14,35 @@ body {
   font-style: normal;
   font-weight: 400;
   font-display: block; }
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100; }
-  .header .menu {
-    transition: .3s ease;
-    height: 50px;
-    padding-top: 1%; }
-    .header .menu__logo {
-      transition: .3s ease;
-      width: fit-content;
-      height: 75%; }
-      .header .menu__logo:hover {
-        opacity: .8; }
-    .header .menuLinks {
-      list-style: none;
-      margin: 0; }
-      .header .menuLinks__link {
-        position: relative;
-        font-size: .7em;
-        font-family: Jost-Medium;
-        cursor: pointer;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #111;
-        opacity: 0;
-        transition: .3s ease;
-        white-space: nowrap; }
-        .header .menuLinks__link:hover, .header .menuLinks__link--active {
-          text-decoration: none;
-          opacity: unset;
-          transition: .3s ease; }
-          .header .menuLinks__link:hover::after, .header .menuLinks__link--active::after {
-            width: 80%;
-            transition: .3s ease; }
-        .header .menuLinks__link--active {
-          pointer-events: none; }
-        .header .menuLinks__link:after {
-          position: absolute;
-          left: 10%;
-          display: block;
-          content: '';
-          opacity: .7;
-          width: 0;
-          height: 2px;
-          background-color: #111;
-          transition: .3s ease; }
-        .header .menuLinks__link--active:after {
-          width: 80%; }
-      .header .menuLinks .loaded {
-        transition: .5s ease;
-        opacity: .7; }
-        .header .menuLinks .loaded:hover {
-          opacity: unset; }
-    .header .menuMobileButton {
-      position: relative;
-      padding: 2% 0;
-      width: 25px; }
-      .header .menuMobileButton__checkbox {
-        margin: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 101;
-        opacity: 0; }
-      .header .menuMobileButton__checkbox:checked ~ span {
-        transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        transition: .3s ease; }
-      .header .menuMobileButton__checkbox:checked ~ span:after {
-        transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        -moz-transform: rotate(90deg);
-        top: 0;
-        transition: .3s ease; }
-      .header .menuMobileButton__checkbox:checked ~ span:before {
-        opacity: 0;
-        transition: .3s ease; }
-      .header .menuMobileButton span,
-      .header .menuMobileButton span:after,
-      .header .menuMobileButton span::before {
-        display: block;
-        position: absolute;
-        width: inherit;
-        height: 2px;
-        background-color: #111;
-        transition: .3s ease; }
-      .header .menuMobileButton span:after {
-        content: '';
-        top: 6px;
-        transition: .3s ease; }
-      .header .menuMobileButton span:before {
-        content: '';
-        top: -6px;
-        transition: .3s ease; }
-
-@media (min-width: 576px) {
-  .header .menuLinks {
-    width: 55%; } }
-@media (min-width: 768px) {
-  .header .menuLinks {
-    width: 45%; }
-    .header .menuLinks__link {
-      font-size: .9em; } }
-@media (min-width: 992px) {
-  .header .menuLinks {
-    width: 40%; } }
-@media (min-width: 1200px) {
-  .header .menuLinks {
-    width: 30%; } }
-.intro {
-  background: linear-gradient(#fdfdfd, #ffffff);
-  height: 100vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden; }
-  .intro__prlxFirst {
-    display: block;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-image: url("https://vugarkerimov.ru/files/images/main/prlxFirst.png");
-    transition: 1s ease;
-    z-index: 5;
-    bottom: -23vw;
-    width: 130%;
-    height: 75vw; }
-  .intro__prlxSecond {
-    display: block;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-image: url("https://vugarkerimov.ru/files/images/main/prlxSecond.png");
-    transition: 1s ease;
-    width: 150%;
-    height: 100vw;
-    bottom: 0;
-    z-index: 4;
-    opacity: 0; }
-  .intro__prlxThird {
-    display: block;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-image: url("https://vugarkerimov.ru/files/images/main/prlxThird.png");
-    transition: 1s ease;
-    bottom: 5vw;
-    width: 100%;
-    height: 76vw;
-    z-index: 3; }
-  .intro__prlxFourth {
-    display: block;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    position: absolute;
-    background-image: url("https://vugarkerimov.ru/files/images/main/prlxFourth.png");
-    transition: 1s ease;
-    background-size: cover;
-    opacity: .6;
-    z-index: 2;
-    width: 100%;
-    height: 100%; }
-  .intro__prlxFifth {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #111;
-    opacity: .89;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    transition: 1s ease;
-    background: linear-gradient(rgba(177, 230, 255, 0.933), #b9fdff);
-    font-family: Verdana, Geneva, Tahoma, sans-serif; }
-    .intro__prlxFifth .intro__titleDesktop {
-      font-size: 0; }
-    .intro__prlxFifth .intro__titleMobile {
-      font-size: 4vw; }
-  .intro .loaded {
-    opacity: unset; }
-
-@media (min-width: 576px) {
-  .intro__prlxFirst {
-    bottom: -43vw;
-    width: 130%;
-    height: 75vw; }
-  .intro__prlxSecond {
-    width: 70%;
-    height: 38vw;
-    bottom: 0; }
-  .intro__prlxThird {
-    bottom: -52vw;
-    width: 100%;
-    height: 76vw; }
-  .intro__prlxFourth {
-    opacity: .1; }
-  .intro__prlxFifth {
-    background: none; }
-    .intro__prlxFifth .intro__titleDesktop {
-      font-size: 13vw; }
-    .intro__prlxFifth .intro__titleMobile {
-      font-size: 0; } }
-.about {
-  padding: 5vw 0;
-  width: 100%;
-  background-color: #111;
-  transition: .3s ease; }
-  .about__title {
-    font-size: 4em;
-    font-family: Geneva, Tahoma, sans-serif;
-    color: white;
-    opacity: .9;
-    text-align: center;
-    transition: 1.5s; }
-  .about__text {
-    font-size: 0.8em;
-    color: white;
-    font-family: Jost-ExtraLight;
-    opacity: .8;
-    line-height: 1.5;
-    transition: .3s ease; }
-    .about__text p {
-      transition: 1.5s; }
-  .about__link {
-    transition: .3s ease;
-    font-size: 0.8em;
-    color: white;
-    opacity: .8;
-    font-family: Jost-ExtraLight;
-    line-height: 1.5;
-    cursor: pointer; }
-    .about__link:hover {
-      color: #c4c4c4; }
-  .about .container {
-    width: 90%;
-    padding: 0 5%; }
-  .about .invisible {
-    opacity: 0; }
-
-@media (min-width: 576px) {
-  .about__title {
-    font-size: 5em; }
-  .about__text {
-    font-size: 1.1em; }
-  .about__link {
-    font-size: 1em; }
-  .about .container {
-    width: auto;
-    padding: 0; } }
-@media (min-width: 992px) {
-  .about__title {
-    font-size: 8em; } }
+/* ------ переменные ------ */
+/* ------ mixin для трансформирования ------ */
+/* ------ свойства ------ */
 .preloader {
-  transition: 1s ease;
-  z-index: 9999;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(#ffffff, #ffffff); }
+  transition: 1s ease;
+  z-index: 9999;
+  background: linear-gradient(#000000, #000008); }
   .preloader__circle {
-    width: 66.6666666667px;
-    height: 66.6666666667px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    box-shadow: 2px 2px 2px rgba(2, 9, 17, 0.789);
-    animation: preloader .5s infinite linear; }
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.789);
+    animation: preloader 0.5s infinite linear; }
   .preloader__gif {
     width: 50px;
     height: 50px;
     image-rendering: pixelated;
-    animation: preloader .5s infinite linear reverse;
+    animation: preloader 0.5s infinite linear reverse;
     opacity: 0; }
   .preloader--loaded {
     opacity: 0;
     z-index: -999; }
 
+/* ------ анимация ------ */
 @keyframes preloader {
   from {
     transform: rotate(0deg);
@@ -309,5 +52,85 @@ body {
     transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -moz-transform: rotate(360deg); } }
+body {
+  background: linear-gradient(-45deg, #0c1315, black);
+  /* ------ body container to smooth scrolling ------ */ }
+  body__container {
+    padding: 0;
+    will-change: transform; }
+
+.main {
+  /* ------ parallax layers ------ */ }
+  .mainWrapper {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .main .layers {
+    border-radius: 50%;
+    min-width: calc(min(80vw, 80vh));
+    min-height: calc(min(80vw, 80vh));
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main .layers .layer {
+      min-width: calc(min(80vw, 80vh));
+      min-height: calc(min(80vw, 80vh));
+      position: absolute; }
+    .main .layers__base, .main .layers__middle, .main .layers__front {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: 0.75s cubic-bezier(0.075, 0.05, 0, 1); }
+    .main .layers__base {
+      padding: calc(min(10vw, 10vh));
+      transform: translate3d(calc(var(--mouseX) / 16), calc(var(--scrollTop) / 2 + var(--mouseY) / 16), 0); }
+    .main .layers__middle {
+      transform: translate3d(calc(var(--mouseX) / 24), calc(var(--scrollTop) / 2.5 + var(--mouseY) / 24), 0); }
+    .main .layers__front {
+      padding-top: 60%;
+      transform: translate3d(calc(var(--mouseX) / 22), calc(var(--scrollTop) / 5 + var(--mouseY) / 22), 0); }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: calc(min(90vw, 90vh));
+  min-height: 5vh;
+  /* ------ logo ------ */
+  /* ------ button ------ */ }
+  .header__img {
+    height: calc(min(5vh, 5vw));
+    transition: .5s; }
+    .header__img:hover {
+      opacity: .5;
+      transition: .5s; }
+  .header__menuButton {
+    position: relative;
+    height: calc(min(5vh, 5vw));
+    display: inherit;
+    align-items: center;
+    /* ------ button lines ------ */ }
+    .header__menuButton > span {
+      display: block;
+      height: calc(min(5vh, 5vw) / 15);
+      width: calc(min(5vh, 5vw) / 4 * 3);
+      background-color: white; }
+      .header__menuButton > span::before {
+        display: block;
+        content: '';
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        background-color: white; }
+      .header__menuButton > span::before {
+        top: 25%; }
+  .headerWrapper {
+    display: inherit;
+    justify-content: space-between;
+    padding: 5vh 10vw;
+    width: 80vw; }
 
 /*# sourceMappingURL=style.css.map */

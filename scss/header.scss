@@ -1,163 +1,64 @@
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    .menu {
-        @include standartTransitionEase;
-        height: $heightMenu;
-        padding-top: 1%;
-        &__logo {
-            @include standartTransitionEase;
-            width: fit-content;
-            height: 75%;
-            &:hover {
-                opacity: .8;
-            }
+.header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: calc(min(90vw, 90vh));
+    min-height: 5vh;
+
+    /* ------ logo ------ */
+    &__img
+    {
+        height: calc(min(5vh, 5vw));
+        transition: .5s;
+
+        &:hover 
+        {
+            opacity: .5;
+            transition: .5s;
         }
-        &Links {
-            list-style: none;
-            margin: 0;
-            &__link {
-                position: relative;
-                font-size: .7em;
-                font-family: Jost-Medium;
-                cursor: pointer;
-                text-decoration: none;
-                text-transform: uppercase;
-                color: $colorBlack;
-                opacity: 0;
-                @include standartTransitionEase();
-                white-space: nowrap;
-                &:hover,
-                &--active {
-                    text-decoration: none;
-                    opacity: unset;
-                    transition: .3s ease;
-                    &::after {
-                        width: 80%;
-                        @include standartTransitionEase();
-                    }
-                }
-                &--active {
-                    pointer-events: none;
-                }
-                &:after {
-                    position: absolute;
-                    left: 10%;
-                    display: block;
-                    content: '';
-                    opacity: .7;
-                    width: 0;
-                    height: $heightUnderline;
-                    background-color: $colorBlack;
-                    @include standartTransitionEase();
-                }
-                &--active:after {
-                    width: 80%;
-                }
-            }
-            .loaded {
-                transition: .5s ease;
-                opacity: .7;
-                &:hover {
-                    opacity: unset;
-                }
-            }
-        }
-        &MobileButton {
-            position: relative;
-            padding: 2% 0;
-            width: $widthMobileButton;
-            &__checkbox {
-                margin: 0;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                z-index: 101;
-                opacity: 0;
-            }
-            &__checkbox:checked~span {
-                @include transform(rotate(-45deg));
-                @include standartTransitionEase();
-            }
-            &__checkbox:checked~span:after {
-                @include transform(rotate(90deg));
-                top: 0;
-                @include standartTransitionEase();
-            }
-            &__checkbox:checked~span:before {
-                opacity: 0;
-                @include standartTransitionEase();
-            }
-            span,
-            span:after,
-            span::before {
+    }
+    
+    /* ------ button ------ */
+    &__menuButton
+    {
+        position: relative;
+        height: calc(min(5vh, 5vw));
+        display: inherit;
+        align-items: center;
+        
+        /* ------ button lines ------ */
+        & > span
+        {
+            display: block;
+            height: calc(min(5vh, 5vw) / 15);
+            width: calc(min(5vh, 5vw) / 4 * 3);
+            background-color: white;
+
+            &::before
+            {
                 display: block;
+                content: '';
                 position: absolute;
+                height: inherit;
                 width: inherit;
-                height: $heightMobileButtonLines;
-                background-color: $colorBlack;
-                @include standartTransitionEase();
+                background-color: white;
             }
-            span:after {
-                content: '';
-                top: $heightMobileButtonLines * 3;
-                @include standartTransitionEase();
-            }
-            span:before {
-                content: '';
-                top: $heightMobileButtonLines * -3;
-                @include standartTransitionEase();
+
+            &::before
+            {
+                top: 25%;
             }
         }
     }
-}
 
-@media (min-width: $mediaDesktopSM) {
-    .header {
-        .menu {
-            &Links {
-                width: 55%;
-            }
-        }
-    }
-}
+    
 
-@media (min-width: $mediaDesktopMD) {
-    .header {
-        .menu {
-            &Links {
-                width: 45%;
-                &__link {
-                    font-size: .9em;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: $mediaDesktopLG) {
-    .header {
-        .menu {
-            &Links {
-                width: 40%;
-            }
-        }
-    }
-}
-
-@media (min-width: $mediaDesktopXL) {
-    .header {
-        .menu {
-            &Links {
-                width: 30%;
-            }
-        }
+    &Wrapper
+    {
+        display: inherit;
+        justify-content: space-between;
+        padding: 5vh 10vw;
+        width: 80vw;
     }
 }

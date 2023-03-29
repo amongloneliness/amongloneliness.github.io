@@ -1,0 +1,82 @@
+body
+{
+    background: linear-gradient(-45deg, #0c1315, black);
+
+    /* ------ body container to smooth scrolling ------ */
+    &__container
+    {
+        padding: 0;
+        will-change: transform;     // optimisation of scrolling and parallax
+    }
+}
+
+.main
+{
+    &Wrapper
+    {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ------ parallax layers ------ */
+    & .layers
+    {
+        border-radius: 50%;
+        min-width: calc(min(80vw, 80vh));
+        min-height: calc(min(80vw, 80vh));
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        & .layer
+        {
+            min-width: calc(min(80vw, 80vh));
+            min-height: calc(min(80vw, 80vh));
+            position: absolute;
+        }
+
+
+        &__base, &__middle, &__front
+        {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: .75s cubic-bezier(.075, .05, 0, 1);
+        }
+
+        &__base
+        {
+            padding: calc(min(10vw, 10vh));
+            transform: translate3d(
+                calc(var(--mouseX) / 16),                              // Ox
+                calc(var(--scrollTop) / 2 + var(--mouseY) / 16),       // Oy
+                0                                                      // Oy
+            );
+        }
+
+        &__middle
+        {
+            transform: translate3d(
+                calc(var(--mouseX) / 24),
+                calc(var(--scrollTop) / 2.5 + var(--mouseY) / 24),
+                0
+            );
+        }
+
+        &__front
+        {
+            padding-top: 60%;
+            transform: translate3d(
+                calc(var(--mouseX) / 22),
+                calc(var(--scrollTop) / 5 + var(--mouseY) / 22),
+                0
+            );
+        }
+    }
+}
