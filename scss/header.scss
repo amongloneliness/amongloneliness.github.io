@@ -1,11 +1,11 @@
 .header
 {
-    user-select: none;
     display: flex;
     position: fixed;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    background: linear-gradient(-45deg, #0c131544, rgba(0, 0, 0, 0.365));
     z-index: 1000;
     width: 100vw;
     height: 80px;
@@ -15,6 +15,7 @@
         padding: 25px 10vw;
         display: inherit;
         justify-content: space-between;
+        max-width: 1024px;
         width: 80vw;
     }
 
@@ -41,7 +42,6 @@
         &:hover 
         {
             opacity: .5;
-            transition: .5s;
         }
     }
 
@@ -66,7 +66,7 @@
             border-color: rgb(0, 73, 35);
             border-radius: 5%;
             background-color: rgb(13, 13, 13);
-            transition: .4s;
+            transition: .3s;
 
             &:hover
             {

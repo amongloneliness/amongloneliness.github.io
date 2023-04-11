@@ -1,5 +1,8 @@
 body
 {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
     background: linear-gradient(-45deg, #0c1315, black);
 
     /* ------ body container to smooth scrolling ------ */
@@ -12,27 +15,27 @@ body
 
 .main
 {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 100px 10vw;
+    max-width: 1024px;
 
     &Wrapper
     {
-        padding: 0 20%;
         display: flex;
-        align-items: start;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80vw;
+        max-width: 1024px;
     }
 
     &__text
-    {
-        min-width: calc(min(20vw, 20vh));
-        order: 1;
-        padding: 7% 0 0 0;
+    {   
         display: flex;
         flex-direction: column;
-        align-items: start;
         pointer-events: none;
-        user-select: none;
+        padding: 100px 0 0 0;
 
         & > h1
         {
@@ -44,7 +47,8 @@ body
 
         & > p
         {
-            font-size: 150%;
+            margin: 10px 0 0 0;
+            font-size: 160%;
             font-weight: 900;
             font-family: Jost-ExtraLight;
             color: #949494;
@@ -54,20 +58,24 @@ body
     /* ------ parallax layers ------ */
     & .layers
     {
-        order: 2;
-        border-radius: 50%;
-        min-width: calc(min(80vw, 80vh));
-        min-height: calc(min(80vw, 80vh));
+        border-radius: 20%;
+        min-width: 400px;
+        min-height: 400px;
         overflow: hidden;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
 
+        &Wrapper
+        {
+            padding: 30px;
+        }
+
         & .layer
         {
-            min-width: calc(min(80vw, 80vh));
-            min-height: calc(min(80vw, 80vh));
+            min-width: inherit;
+            min-height: inherit;
             position: absolute;
         }
 
@@ -82,7 +90,7 @@ body
 
         &__base
         {
-            padding: calc(max(13vw, 13vh));
+            padding: 100px;
             transform: translate3d(
                 calc(var(--mouseX) / 16),                              // Ox
                 calc(var(--scrollTop) / 2 + var(--mouseY) / 16),       // Oy
@@ -101,12 +109,44 @@ body
 
         &__front
         {
-            padding-top: 60%;
+            padding: 60% 20px 20px 20px;
             transform: translate3d(
                 calc(var(--mouseX) / 22),
                 calc(var(--scrollTop) / 5 + var(--mouseY) / 22),
                 0
             );
+        }
+    }
+}
+
+@media (max-width: 935px) {
+    .main
+    {
+        padding: 120px 10vw;
+
+        &Wrapper
+        {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__text
+        {
+            font-size: 2.5vw;
+            order: 2;
+            padding: 40px 0 20px 0;
+
+            & > p
+            {
+                text-align: center;
+            }
+        }
+
+        & .layers
+        {
+            min-width: 80vw;
+            min-height: 80vw;
+            order: 1;
         }
     }
 }
