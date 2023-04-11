@@ -92,6 +92,17 @@ body {
       font-weight: 900;
       font-family: Jost-ExtraLight;
       color: #949494; }
+  .main__logo_links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px; }
+    .main__logo_links > a {
+      pointer-events: painted;
+      padding: 6px 14px 6px 0;
+      transition: .2s; }
+      .main__logo_links > a:hover {
+        opacity: .6; }
   .main .layers {
     border-radius: 20%;
     min-width: 400px;
@@ -136,7 +147,9 @@ body {
     .main .layers {
       min-width: 80vw;
       min-height: 80vw;
-      order: 1; } }
+      order: 1; }
+    .main__logo_links {
+      display: none; } }
 .header {
   display: flex;
   position: fixed;

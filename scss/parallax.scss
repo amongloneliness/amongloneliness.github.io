@@ -55,6 +55,26 @@ body
         }
     }
 
+    &__logo_links
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 20px;
+        
+        & > a
+        {
+            pointer-events: painted;
+            padding: 6px 14px 6px 0;
+            transition: .2s;
+            
+            &:hover
+            {
+                opacity: .6;
+            }
+        }
+    }
+
     /* ------ parallax layers ------ */
     & .layers
     {
@@ -147,6 +167,12 @@ body
             min-width: 80vw;
             min-height: 80vw;
             order: 1;
+        }
+
+
+        &__logo_links
+        {
+            display: none;
         }
     }
 }
