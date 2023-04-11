@@ -1,20 +1,41 @@
-
-/* ------ для адаптива ------ */
-$minHeight: 5vh;
-$minWidth: 5vw;
-
 .header
 {
+    user-select: none;
     display: flex;
+    position: fixed;
     flex-direction: row;
     justify-content: space-between;
-    min-width: calc(min(90vw, 90vh));
-    min-height: $minHeight;
+    align-items: center;
+    z-index: 1000;
+    width: 100vw;
+    height: 80px;
+
+    &Wrapper
+    {
+        padding: 25px 10vw;
+        display: inherit;
+        justify-content: space-between;
+        width: 80vw;
+    }
+
+    &__left
+    {
+        display: flex;
+        align-items: center;
+        height: 40px;
+
+        & > a
+        {
+            display: flex;
+            align-items: center;
+            height: fit-content;
+        }
+    }
 
     /* ------ logo ------ */
     &__img
     {
-        height: calc(min(#{$minHeight}, #{$minWidth}));
+        height: 36px;
         transition: .5s;
 
         &:hover 
@@ -23,77 +44,52 @@ $minWidth: 5vw;
             transition: .5s;
         }
     }
-    
-    /* ------ button ------ */
-    &__menuButton
+
+    /* ------ right part ------ */
+    &__right
     {
-        position: relative;
-        height: calc(min(#{$minHeight}, #{$minWidth}));
-        display: inherit;
-        align-items: center;
-        
-        /* ------ button lines ------ */
-        & > span
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: Jost-Medium;
+        font-weight: bold;
+        height: 40px;
+        width: 170px;
+
+        & > .email_me__btn
         {
-            margin-top: 35%;
-            display: block;
-            height: calc(min(#{$minHeight}, #{$minWidth}) / 15);
-            width: calc(min(#{$minHeight}, #{$minWidth}) / 4 * 3);
-            background-color: white;
+            display: flex;
+            align-items: center;
+            padding: 5% 10%;
+            color:rgb(0, 151, 81);
+            border: solid 3px;
+            border-color: rgb(0, 73, 35);
+            border-radius: 5%;
+            background-color: rgb(13, 13, 13);
+            transition: .4s;
 
-            &::before
+            &:hover
             {
-                display: block;
-                content: '';
-                position: absolute;
-                height: inherit;
-                width: inherit;
-                background-color: white;
-            }
-
-            &::before
-            {
-                top: 35%;
+                color:rgb(2, 221, 119);
+                border-color: rgb(0, 122, 59);
             }
         }
-    }
 
-    &Wrapper
-    {
-        display: inherit;
-        justify-content: space-between;
-        padding: 5vh 10vw;
-        width: 80vw;
+        & > .change_language__btn
+        {
+            color: white;
+            display: flex;
+            align-items: center;
+            height: 40px;
+
+            & > span
+            {
+                padding: 0 8%;
+            }
+        }
     }
 }
 
-/* ----- для мобильных устройств --- */
-@media screen and (max-width: 500px), (max-height: 500px)
-{
-    $minHeight: 10vh;
-    $minWidth: 10vw;
-
-    .header
-    {
-        min-height: $minHeight;
-
-        /* ------ logo ------ */
-        &__img
-        {
-            height: calc(min(#{$minHeight}, #{$minWidth}));
-        }
-        
-        /* ------ button ------ */
-        &__menuButton
-        {
-            height: calc(min(#{$minHeight}, #{$minWidth}));
-
-            /* ------ button lines ------ */
-            & > span
-            {
-                height: calc(min(#{$minHeight}, #{$minWidth}) / 15);
-                width: calc(min(#{$minHeight}, #{$minWidth}) / 4 * 3);
-            }
-        }
-    }
+@media (max-width: 360px) {
+    
 }
