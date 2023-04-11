@@ -4,13 +4,13 @@ body {
 
 @font-face {
   font-family: Jost-Medium;
-  src: url(https://vugarkerimov.ru/files/fonts/Jost-Medium.ttf);
+  src: url("../files/fonts/Jost-Medium.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: block; }
 @font-face {
   font-family: Jost-ExtraLight;
-  src: url(https://vugarkerimov.ru/files/fonts/Jost-ExtraLight.ttf);
+  src: url("../files/fonts/Jost-ExtraLight.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: block; }
