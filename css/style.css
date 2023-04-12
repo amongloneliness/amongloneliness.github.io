@@ -85,7 +85,6 @@ body {
     .main__text > p {
       margin: 10px 0 0 0;
       font-size: 160%;
-      font-weight: 900;
       font-family: Jost-ExtraLight;
       color: #949494; }
   .main__logo_links {
@@ -203,7 +202,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     font-family: Jost-Medium;
-    font-weight: bold;
     height: 40px;
     width: 170px; }
     .header__right > .email_me__btn {
