@@ -67,8 +67,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: start;
-  padding: 100px 10vw;
-  max-width: 1024px;
+  padding: 100px 0;
+  width: inherit;
   /* ------ parallax layers ------ */ }
   .mainWrapper {
     display: flex;
@@ -134,7 +134,7 @@ body {
 
 @media (max-width: 935px) {
   .main {
-    padding: 120px 10vw; }
+    padding: 120px 0; }
     .mainWrapper {
       justify-content: center;
       flex-wrap: wrap; }
