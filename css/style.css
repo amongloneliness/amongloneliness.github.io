@@ -202,8 +202,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     font-family: Jost-Medium;
-    height: 40px;
-    width: 170px; }
+    height: 40px; }
     .header__right > .email_me__btn {
       display: flex;
       align-items: center;
@@ -218,6 +217,7 @@ body {
         color: #02dd77;
         border-color: #007a3b; }
     .header__right > .change_language__btn {
+      padding-left: 40px;
       color: white;
       display: flex;
       align-items: center;
