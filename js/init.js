@@ -1,12 +1,5 @@
 'use strict'
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-ScrollSmoother.create({
-    wrapper: '.body__wrapper',
-    content: '.body__container'
-});
-
 window.onload = () => {
     // preloader();
 

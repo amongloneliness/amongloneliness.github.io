@@ -57,6 +57,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100vw;
+  scroll-behavior: smooth;
   background: linear-gradient(-45deg, #0c1315, black);
   /* ------ body container to smooth scrolling ------ */ }
   body__container {
@@ -150,6 +151,29 @@ body {
       order: 1; }
     .main__logo_links {
       display: none; } }
+.about {
+  position: relative;
+  border-radius: 20px;
+  font-size: 120%;
+  font-family: Jost-Medium;
+  line-height: 1.6;
+  color: #01c3dc;
+  transition: .3s;
+  background-color: #1a1a1a;
+  width: 80vw;
+  max-width: 1024px; }
+  .aboutWrapper {
+    padding: 0 0 100px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .about__text {
+    padding: 5%; }
+  .about:hover {
+    opacity: .8; }
+
 .header {
   display: flex;
   position: fixed;
