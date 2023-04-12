@@ -1,5 +1,6 @@
 .header
 {
+    top: 0;
     display: flex;
     position: fixed;
     flex-direction: row;
@@ -7,12 +8,12 @@
     align-items: center;
     background: linear-gradient(-45deg, #0c131544, rgba(0, 0, 0, 0.365));
     z-index: 1000;
-    width: 100vw;
+    width: 100%;
     height: 80px;
 
     &Wrapper
     {
-        padding: 25px 10vw;
+        padding: 25px 0;
         display: inherit;
         justify-content: space-between;
         max-width: 1024px;

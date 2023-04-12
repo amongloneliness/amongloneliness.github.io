@@ -1,17 +1,13 @@
 body
 {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
     justify-content: center;
     width: 100vw;
     scroll-behavior: smooth;
     background: linear-gradient(-45deg, #0c1315, black);
-
-    /* ------ body container to smooth scrolling ------ */
-    &__container
-    {
-        padding: 0;
-        will-change: transform;     // optimisation of scrolling and parallax
-    }
 }
 
 .main
