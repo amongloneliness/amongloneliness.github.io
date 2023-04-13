@@ -238,6 +238,7 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 80%;
+  max-width: 1024px;
   font-family: Jost-Medium;
   font-size: 200%;
   color: #f2f2f2;
