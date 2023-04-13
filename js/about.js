@@ -30,7 +30,7 @@ function add_text_about() {
 
     about[0].style.cssText += 'pointer-events: none;';
 
-    for (let i = 0, delay = 505; i < about_text_ru.length || i < about_text_en.length; i++, delay += 5) {
+    for (let i = 0, delay = 505; i < about_text_ru.length || i < about_text_en.length; i++, delay += 10) {
 
         // текст русского языка
         if (i < about_text_ru.length) {
