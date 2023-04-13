@@ -20,6 +20,7 @@
         width: 80%;
     }
 
+    /* ------ left part ------ */
     &__left
     {
         display: flex;
@@ -86,15 +87,17 @@
             align-items: center;
             height: 40px;
             padding-left: 15px;
+            transition: .2s;
 
             & > span
             {
                 padding-left: 3px;
             }
+
+            &:hover
+            {
+                opacity: .8;
+            }
         }
     }
-}
-
-@media (max-width: 360px) {
-    
 }
