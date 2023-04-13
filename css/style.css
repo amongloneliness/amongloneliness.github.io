@@ -202,28 +202,30 @@ body {
     flex-direction: row;
     justify-content: space-between;
     font-family: Jost-Medium;
-    height: 40px; }
+    height: 40px;
+    width: max-content; }
     .header__right > .email_me__btn {
       display: flex;
       align-items: center;
-      padding: 5% 10%;
       color: #009751;
       border: solid 3px;
       border-color: #004923;
       border-radius: 5%;
       background-color: #0d0d0d;
       transition: .3s; }
+      .header__right > .email_me__btn > span {
+        padding: 5px 20px; }
       .header__right > .email_me__btn:hover {
         color: #02dd77;
         border-color: #007a3b; }
     .header__right > .change_language__btn {
-      padding-left: 40px;
       color: white;
       display: flex;
       align-items: center;
-      height: 40px; }
+      height: 40px;
+      padding-left: 15px; }
       .header__right > .change_language__btn > span {
-        padding: 0 8%; }
+        padding-left: 3px; }
 
 .projects {
   display: flex;

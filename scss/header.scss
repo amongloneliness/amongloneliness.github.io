@@ -54,18 +54,23 @@
         justify-content: space-between;
         font-family: Jost-Medium;
         height: 40px;
+        width: max-content;
 
         & > .email_me__btn
         {
             display: flex;
             align-items: center;
-            padding: 5% 10%;
             color:rgb(0, 151, 81);
             border: solid 3px;
             border-color: rgb(0, 73, 35);
             border-radius: 5%;
             background-color: rgb(13, 13, 13);
             transition: .3s;
+
+            & > span
+            {
+                padding: 5px 20px;
+            }
 
             &:hover
             {
@@ -76,15 +81,15 @@
 
         & > .change_language__btn
         {
-            padding-left: 40px;
             color: white;
             display: flex;
             align-items: center;
             height: 40px;
+            padding-left: 15px;
 
             & > span
             {
-                padding: 0 8%;
+                padding-left: 3px;
             }
         }
     }
