@@ -39,7 +39,6 @@ function add_text_about() {
             } else {
                 sleep(delay).then(() => {about__text[0].innerHTML += about_text_ru[i];});
             }
-
         }
 
         // текст английского языка
