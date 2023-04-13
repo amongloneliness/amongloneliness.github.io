@@ -83,11 +83,15 @@
     </main>
 
     <div class="aboutWrapper">
-        <div onclick="f()" class="about">
+        <div onclick="add_text_about()" class="about">
             <div class="about__text">
-                <p class="about__text_content">
+                <p class="about__text_content language">
                     <span style="color: rgb(0, 162, 89);">userPC:</span><b style="color: #006cc4;">~</b><span style="color:#e3e3e3;">$ cat</span>
                     <span class="language" style="color:#e3e3e3;">обо_мне.txt кликни</span>
+                    <br><br>
+                </p>
+                <p class="about__text_content language d-none">
+                    <span style="color: rgb(0, 162, 89);">userPC:</span><b style="color: #006cc4;">~</b><span style="color:#e3e3e3;">$ cat</span>
                     <span class="language d-none" style="color:#e3e3e3;">about_me.txt click</span>
                     <br><br>
                 </p>
@@ -97,8 +101,11 @@
 </body>
 
 <!-- <script src="js/preloader.js"></script> -->
+<script src="js/global.js"></script>
 <script src="js/about.js"></script>
-<script src="js/init.js"></script>
+<script src="js/change_language.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/onload.js"></script>
 
 
                <!-- <div class="projects">
