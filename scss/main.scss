@@ -153,6 +153,11 @@ body
             {
                 text-align: center;
             }
+
+            & > img
+            {
+                width: 80%;
+            }
         }
 
         & .layers
