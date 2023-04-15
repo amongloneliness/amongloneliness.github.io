@@ -266,7 +266,7 @@ body {
   align-items: center;
   width: inherit;
   width: 35vw;
-  max-width: 450px;
+  max-width: 400px;
   border-radius: 15px;
   overflow: hidden;
   transition: .4s; }
