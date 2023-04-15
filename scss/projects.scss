@@ -35,12 +35,13 @@
 
 .project
 {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: inherit;
     width: 35vw;
-    max-width: 400px;
+    max-width: 450px;
     border-radius: 15px;
     overflow: hidden;
     transition: .4s;
@@ -48,11 +49,36 @@
     &:hover
     {
         box-shadow: rgba(255, 255, 255, 0.234) 0 0 30px 3px;
+
+        .project__title
+        {
+            opacity: 1;
+        }
+
+        & > img
+        {
+            opacity: 0.18;
+        }
     }
 
     &Wrapper
     {
-        padding: 2.5vw;
+        padding: 2.5%;
+    }
+
+    &__title
+    {
+        text-align: center;
+        padding: 5%;
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        font-family: Jost-Medium;
+        font-size: 80%;
+        color: rgb(230, 230, 230);
+        opacity: 0;
+        position: absolute;
+        transition: .3s;
     }
 
     & > img
@@ -60,5 +86,13 @@
         height: 35vw;
         max-height: 400px;
         pointer-events: none;
+        transition: .3s;
+    }
+}
+
+@media (max-width: 935px) {
+    .project__title
+    {
+        font-size: 35%;
     }
 }
