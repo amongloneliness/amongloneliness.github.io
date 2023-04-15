@@ -299,5 +299,40 @@ body {
 @media (max-width: 935px) {
   .project__title {
     font-size: 35%; } }
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  border-radius: 20px;
+  background-color: #1a1a1a;
+  padding: 80px 0; }
+  .contactsWrapper {
+    padding-top: 120px;
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+  .contacts__title {
+    text-align: center;
+    color: #007332;
+    font-family: Jost-Medium;
+    font-size: 280%;
+    padding-bottom: 25px; }
+  .contacts__input {
+    width: 60%;
+    background-color: #1a1a1a;
+    border: solid 4px #007442;
+    outline: none;
+    padding: 0 10px;
+    color: #00a447;
+    font-size: 100%;
+    font-family: Jost-ExtraLight; }
+    .contacts__inputWrapper {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px; }
+    .contacts__input_label {
+      width: 60%; }
 
 /*# sourceMappingURL=style.css.map */
