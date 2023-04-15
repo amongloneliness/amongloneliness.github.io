@@ -264,18 +264,18 @@ body {
   justify-content: center;
   align-items: center;
   width: inherit;
-  width: 27vw;
-  max-width: 450px;
+  width: 35vw;
+  max-width: 400px;
   border-radius: 15px;
   overflow: hidden;
   transition: .4s; }
   .project:hover {
     box-shadow: rgba(255, 255, 255, 0.234) 0 0 30px 3px; }
   .projectWrapper {
-    padding: 20px; }
+    padding: 2.5vw; }
   .project > img {
-    height: 27vw;
-    max-height: 450px;
+    height: 35vw;
+    max-height: 400px;
     pointer-events: none; }
 
 /*# sourceMappingURL=style.css.map */

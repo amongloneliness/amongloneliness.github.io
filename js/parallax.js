@@ -2,7 +2,8 @@
 
 // обработка скроллинга
 window.addEventListener('scroll', e => {
-    document.body.style.cssText += `--scrollTop: ${this.scrollY}px`;
+    if (this.scrollY <= document.body.getElementsByClassName('layers')[0].clientHeight)
+        document.body.style.cssText += `--scrollTop: ${this.scrollY}px`;
 });
 
 // обработка движения мыши
