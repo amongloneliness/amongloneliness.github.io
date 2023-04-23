@@ -56,8 +56,8 @@
         {
             opacity: 1;
             transition: .5s;
-            top: 2px;
-            right: -55px;
+            top: 3px;
+            right: -65px;
             font-size: 80%;
             position: absolute;
             color: rgba(0, 192, 83, 0.73);
@@ -111,6 +111,15 @@
             &Wrapper
             {
                 justify-content: center;
+            }
+
+            &_copied
+            {
+                display: flex;
+                justify-content: center;
+                top: 140%;
+                left: 33%;
+                right: 33%;
             }
         }
     }

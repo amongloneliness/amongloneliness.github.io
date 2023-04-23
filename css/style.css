@@ -341,8 +341,8 @@ body {
     .contacts__email_copied {
       opacity: 1;
       transition: .5s;
-      top: 2px;
-      right: -55px;
+      top: 3px;
+      right: -65px;
       font-size: 80%;
       position: absolute;
       color: rgba(0, 192, 83, 0.73);
@@ -370,6 +370,12 @@ body {
       text-align: justify;
       padding: 0 40px; }
     .contacts__emailWrapper {
-      justify-content: center; } }
+      justify-content: center; }
+    .contacts__email_copied {
+      display: flex;
+      justify-content: center;
+      top: 140%;
+      left: 33%;
+      right: 33%; } }
 
 /*# sourceMappingURL=style.css.map */
