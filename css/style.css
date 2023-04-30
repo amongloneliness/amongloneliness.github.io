@@ -149,7 +149,7 @@ body {
     .main__logo_links {
       display: none; } }
 .about {
-  border: solid 4px #bbbbbb;
+  border: solid 4px #bbbbbb81;
   border-radius: 20px;
   font-size: 120%;
   font-family: Jost-Medium;
@@ -341,7 +341,7 @@ body {
     .contacts__email_copied {
       opacity: 1;
       transition: .5s;
-      top: 3px;
+      top: 2px;
       right: -65px;
       font-size: 80%;
       position: absolute;
