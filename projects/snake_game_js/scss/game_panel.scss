@@ -1,0 +1,120 @@
+.choose
+{
+    user-select: none;
+    font-family: Jost-Medium;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &Wrapper
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+    }
+
+    &__title
+    {
+        text-align: center;
+        color: rgb(228, 228, 228);
+    }
+
+    &__options
+    {
+        height: 150px;
+        max-width: 1024px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__option
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid rgba(240, 255, 255, 0.685);
+        background-color: rgb(20, 20, 20);
+        width: 120px;
+        height: 70px;
+        border-radius: 20px;
+        color: rgb(176, 176, 176);
+        transition: .1s;
+
+        &Wrapper
+        {
+            display: flex;
+            width: 160px;
+            justify-content: center;
+        }
+
+        &:hover
+        {
+            color: rgb(0, 183, 110);
+            border: 3px solid rgb(0, 128, 77);
+            height: 80px;
+            width: 130px;
+        }
+    }
+
+
+
+    .chosen
+    {
+        color: rgb(0, 183, 110);
+        border: 3px solid rgb(0, 128, 77);
+    }
+
+    &__play_btn
+    {
+        width: 50%;
+        height: 50px;
+        background-color: rgb(12, 12, 12);
+        border: 3px solid rgb(0, 96, 58);
+        border-radius: 15px;
+        font-size: 110%;
+        font-family: Jost-Medium;
+        color: rgb(1, 159, 96);
+        transition: .1s;
+
+        &Wrapper
+        {
+            display: flex;
+            justify-content: center;
+        }
+
+        &:hover
+        {
+            border-color:  rgb(0, 149, 90);
+            color: rgb(4, 208, 126);
+        }
+    }
+}
+
+// мобильные экраны
+@media (max-width: 600px) {
+    .choose
+    {
+        font-size: 2.7vw;
+
+        &__options
+        {
+            width: 80vw;
+        }
+
+        &__option
+        {
+            width: 20vw;
+
+            &:hover
+            {
+                width: 25vw;
+            }
+        }
+    }
+}

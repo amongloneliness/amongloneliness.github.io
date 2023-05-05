@@ -1,0 +1,60 @@
+/* ------ переменные ------ */
+$preloaderWidthHeight: 50px;
+$preloaderAnimation: preloader .5s infinite linear;
+
+/* ------ mixin для трансформирования ------ */
+@mixin transform($property) {
+    transform: $property;
+    -ms-transform: $property;
+    -moz-transform: $property;
+}
+
+/* ------ свойства ------ */
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 1s ease;
+    z-index: 9999;
+    background: linear-gradient(#000000, #000008);
+
+    &__circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $preloaderWidthHeight * 1.5;
+        height: $preloaderWidthHeight * 1.5;
+        border-radius: 50%;
+        box-shadow: 2px 2px 2px rgb(172, 172, 172);
+        animation: $preloaderAnimation;
+    }
+
+    &__gif {
+        width: $preloaderWidthHeight;
+        height: $preloaderWidthHeight;
+        image-rendering: pixelated;
+        animation: $preloaderAnimation reverse;
+        opacity: 0;
+    }
+
+    &--loaded {
+        opacity: 0;
+        z-index: -999;
+    }
+}
+
+/* ------ анимация ------ */
+@keyframes preloader {
+    from {
+        @include transform(rotate(0deg));
+    }
+    
+    to {
+        @include transform(rotate(360deg));
+    }
+}

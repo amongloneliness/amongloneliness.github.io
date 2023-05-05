@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="favicon.png" rel="shortcut icon">
+</head>
+<body>
+    <!-- preloader page -->
+    <div class="preloader">
+        <div class="preloader__circle">
+            <img class="preloader__gif" src="files/gifs/preloader.gif" alt="running vugar">
+        </div>
+    </div>
+
+    <div class="chooseWrapper">
+        <div onclick="change_language()" class="change_language_btn">
+            
+        </div>
+        <div class="choose">
+            <h1 class="choose__title">Choose field size</h1>
+            <div class="choose__options">
+                <div class="choose__optionWrapper">
+                    <div onclick="choose_level(1)" class="choose__option chosen choose_16x16">16 x 16</div>
+                </div>
+
+                <div class="choose__optionWrapper">
+                    <div onclick="choose_level(2)" class="choose__option choose_32x32">32 x 32</div>
+                </div>
+            </div>
+            
+            <div class="choose__play_btnWrapper">
+                <button onclick="start_game()" class="choose__play_btn">play</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="gameWrapper hidden d-none">
+        <div class="scoreWrapper">
+            <div class="score"></div>
+        </div>
+
+        <div class="game">
+            <div class="game__groundWrapper">
+                <div class="game__ground"></div>
+            </div>
+        </div>
+
+        <div onclick="main_menu()"  class="menu_btnWrapper">
+            <button class="menu_btn">back</button>
+        </div>
+    </div>
+
+    <div class="replayWrapper hidden d-none">
+        <div class="replay">
+            <h1 class="replay__title">Game over</h1>
+            <div class="replay__play_btnWrapper">
+                <button onclick="replay_game()" class="replay__play_btn">retry</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/preloader.js"></script>
+    <script src="js/choose_level.js"></script>
+    <script src="js/start_game.js"></script>
+    <script src="js/update.js"></script>
+    <script src="js/create_ground.js"></script>
+    <script src="js/create_player.js"></script>
+    <script src="js/create_food.js"></script>
+    <script src="js/print_ground.js"></script>
+    <script src="js/print_player.js"></script>
+    <script src="js/print_food.js"></script>
+    <script src="js/move_player.js"></script>
+    <script src="js/dead_player.js"></script>
+    <script src="js/replay_game.js"></script>
+    <script src="js/main_menu.js"></script>
+    <script src="js/global.js"></script>
+</body>
+</html>

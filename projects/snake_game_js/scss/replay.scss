@@ -1,0 +1,56 @@
+.replay
+{
+    user-select: none;
+    font-family: Jost-Medium;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &Wrapper
+    {
+        z-index: 100;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+        background-color: rgba(0, 0, 0, 0.697);
+    }
+
+    &__title
+    {
+        text-align: center;
+        color: rgb(228, 228, 228);
+    }
+
+    &__play_btn
+    {
+        width: 80%;
+        height: 50px;
+        background-color: rgb(12, 12, 12);
+        border: 3px solid rgb(0, 96, 58);
+        border-radius: 15px;
+        font-size: 110%;
+        font-family: Jost-Medium;
+        color: rgb(1, 159, 96);
+        transition: .1s;
+
+        &Wrapper
+        {
+            display: flex;
+            justify-content: center;
+        }
+
+        &:hover
+        {
+            border-color:  rgb(0, 149, 90);
+            color: rgb(4, 208, 126);
+        }
+    }
+}

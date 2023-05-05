@@ -1,0 +1,281 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(black, #000009); }
+
+.hidden {
+  opacity: 0; }
+
+.d-none {
+  display: none !important; }
+
+@font-face {
+  font-family: Jost-Medium;
+  src: url("../files/fonts/Jost-Medium.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block; }
+@font-face {
+  font-family: Jost-ExtraLight;
+  src: url("../files/fonts/Jost-ExtraLight.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block; }
+.choose {
+  user-select: none;
+  font-family: Jost-Medium;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .chooseWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: .3s; }
+  .choose__title {
+    text-align: center;
+    color: #e4e4e4; }
+  .choose__options {
+    height: 150px;
+    max-width: 1024px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center; }
+  .choose__option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(240, 255, 255, 0.685);
+    background-color: #141414;
+    width: 120px;
+    height: 70px;
+    border-radius: 20px;
+    color: #b0b0b0;
+    transition: .1s; }
+    .choose__optionWrapper {
+      display: flex;
+      width: 160px;
+      justify-content: center; }
+    .choose__option:hover {
+      color: #00b76e;
+      border: 3px solid #00804d;
+      height: 80px;
+      width: 130px; }
+  .choose .chosen {
+    color: #00b76e;
+    border: 3px solid #00804d; }
+  .choose__play_btn {
+    width: 50%;
+    height: 50px;
+    background-color: #0c0c0c;
+    border: 3px solid #00603a;
+    border-radius: 15px;
+    font-size: 110%;
+    font-family: Jost-Medium;
+    color: #019f60;
+    transition: .1s; }
+    .choose__play_btnWrapper {
+      display: flex;
+      justify-content: center; }
+    .choose__play_btn:hover {
+      border-color: #00955a;
+      color: #04d07e; }
+
+@media (max-width: 600px) {
+  .choose {
+    font-size: 2.7vw; }
+    .choose__options {
+      width: 80vw; }
+    .choose__option {
+      width: 20vw; }
+      .choose__option:hover {
+        width: 25vw; } }
+.game {
+  display: flex;
+  max-width: 1024px;
+  width: calc(min(80vw, 80vh));
+  height: calc(min(80vw, 80vh)); }
+  .gameWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; }
+  .game__ground {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(min(80vw, 80vh));
+    height: calc(min(80vw, 80vh)); }
+    .game__groundWrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%; }
+
+.line {
+  display: flex;
+  flex-direction: row; }
+
+.square {
+  background-color: #141414;
+  border: solid 2px rgba(240, 255, 255, 0);
+  border-radius: 30%;
+  margin: 2px; }
+
+.food {
+  background-color: #e2e062; }
+
+.snake {
+  background-color: #00b76e; }
+
+.snake_dead {
+  background-color: #ae0000; }
+
+.score {
+  text-align: center;
+  color: rgba(240, 255, 255, 0.685);
+  font-family: Jost-Medium;
+  font-size: 120%; }
+  .scoreWrapper {
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 50px;
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    border-radius: 15px;
+    background-color: #141414;
+    border: 3px solid rgba(240, 255, 255, 0.685);
+    opacity: .7; }
+
+.menu_btn {
+  text-align: center;
+  color: rgba(240, 255, 255, 0.685);
+  background-color: #141414;
+  border: none;
+  font-family: Jost-Medium;
+  font-size: 120%; }
+  .menu_btnWrapper {
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 25px;
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    border-radius: 15px;
+    background-color: #141414;
+    border: 3px solid rgba(240, 255, 255, 0.685);
+    opacity: .7;
+    transition: .3s; }
+    .menu_btnWrapper:hover {
+      border: 3px solid #00804d; }
+
+@media (max-width: 600px) {
+  .score {
+    font-size: 2.7vw; }
+
+  .menu_btn {
+    font-size: 2.7vw; } }
+.replay {
+  user-select: none;
+  font-family: Jost-Medium;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+  .replayWrapper {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    background-color: rgba(0, 0, 0, 0.697); }
+  .replay__title {
+    text-align: center;
+    color: #e4e4e4; }
+  .replay__play_btn {
+    width: 80%;
+    height: 50px;
+    background-color: #0c0c0c;
+    border: 3px solid #00603a;
+    border-radius: 15px;
+    font-size: 110%;
+    font-family: Jost-Medium;
+    color: #019f60;
+    transition: .1s; }
+    .replay__play_btnWrapper {
+      display: flex;
+      justify-content: center; }
+    .replay__play_btn:hover {
+      border-color: #00955a;
+      color: #04d07e; }
+
+/* ------ переменные ------ */
+/* ------ mixin для трансформирования ------ */
+/* ------ свойства ------ */
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 1s ease;
+  z-index: 9999;
+  background: linear-gradient(#000000, #000008); }
+  .preloader__circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px #acacac;
+    animation: preloader 0.5s infinite linear; }
+  .preloader__gif {
+    width: 50px;
+    height: 50px;
+    image-rendering: pixelated;
+    animation: preloader 0.5s infinite linear reverse;
+    opacity: 0; }
+  .preloader--loaded {
+    opacity: 0;
+    z-index: -999; }
+
+/* ------ анимация ------ */
+@keyframes preloader {
+  from {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg); } }
+
+/*# sourceMappingURL=style.css.map */

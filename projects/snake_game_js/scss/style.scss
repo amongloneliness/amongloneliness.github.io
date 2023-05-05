@@ -1,0 +1,25 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(black, rgb(0, 0, 9));
+}
+
+.hidden
+{
+    opacity: 0;
+}
+
+.d-none
+{
+    display: none !important;
+}
+
+@import 'fonts';
+@import 'game_panel';
+@import 'game_ground';
+@import 'score_menu';
+@import 'replay';
+@import 'preloader';
