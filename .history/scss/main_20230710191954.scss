@@ -48,8 +48,7 @@ body
 
         & > .codewars_link
         {
-            margin: 20px 0 0 0;
-            pointer-events: painted;
+            margin: 10px 0 0 0;
         }
     }
 
@@ -154,11 +153,6 @@ body
             font-size: 2.5vw;
             order: 2;
             padding: 40px 0 20px 0;
-
-            & > .codewars_link
-            {
-                text-align: center;
-            }
 
             & > p
             {

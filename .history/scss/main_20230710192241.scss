@@ -49,7 +49,11 @@ body
         & > .codewars_link
         {
             margin: 20px 0 0 0;
-            pointer-events: painted;
+
+            .codewars_link:hover
+            {
+                opacity: .8;
+            }
         }
     }
 
